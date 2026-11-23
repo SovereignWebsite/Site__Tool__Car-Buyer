@@ -148,3 +148,4 @@ html[data-design] button.danger{background:transparent;color:#b42318;border:2px 
 @media (prefers-color-scheme:dark){html[data-design] button.danger{color:#ff8f86;border-color:#ff8f86}}
 @media (max-width:40rem){.chooser{flex-wrap:wrap}.chooser a{flex-basis:100%}}
 #ws-reg{white-space:nowrap;font-family:ui-monospace,monospace;font-size:clamp(1.4rem,4.5vw,2rem)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
