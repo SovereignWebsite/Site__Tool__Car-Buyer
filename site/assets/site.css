@@ -230,3 +230,12 @@ html{accent-color:var(--accent)}
 [data-design="5"] .stage{border-left:14px solid #0057a8;box-shadow:inset 3px 0 0 #0d1b2a;position:relative}
 [data-design="5"] .stage::before{content:"";position:absolute;left:-8px;top:0;bottom:0;border-left:2px dashed #fff}
 [data-design="5"] .stage .tick{border-left:0}
+
+.map-tall{display:none}
+@media (max-width:600px){.bigmap .map-wide{display:none}.bigmap .map-tall{display:block;width:100%;height:auto;border:3px solid #0057a8;border-radius:6px}.bigmap{width:100%;margin-left:0;transform:none}}
+[data-design="5"] .stage[data-stage="b"] .jn::before{content:"J1 to J2"}
+[data-design="5"] .stage[data-stage="v"] .jn::before{content:"J3 to J4"}
+[data-design="5"] .stage[data-stage="d"] .jn::before{content:"J5 to J7"}
+[data-design="5"] .jn{min-width:5.5rem}
+@media (max-width:40rem){[data-design="3"] .stage .tick li:not(:has(input:checked))::after{content:"Not yet"}}
+[data-design="5"] .stage .tick li::before{display:inline-block;width:1.2rem;text-align:center}
