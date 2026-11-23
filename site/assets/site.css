@@ -223,3 +223,6 @@ html{accent-color:var(--accent)}
 [data-design="3"] .stage .tick li::after{content:"Not yet"}
 [data-design="3"] .stage .tick li:has(input:checked)::after{content:"Done"}
 [data-design="5"] .jn::before{content:counter(jn, upper-alpha)}
+
+.bigmap{width:min(100vw - 2rem, 64rem);margin-left:50%;transform:translateX(-50%)}
+.bigmap svg{max-width:none;width:100%;border:3px solid #0057a8;border-radius:6px}
