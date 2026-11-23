@@ -149,3 +149,28 @@ html[data-design] button.danger{background:transparent;color:#b42318;border:2px 
 @media (max-width:40rem){.chooser{flex-wrap:wrap}.chooser a{flex-basis:100%}}
 #ws-reg{white-space:nowrap;font-family:ui-monospace,monospace;font-size:clamp(1.4rem,4.5vw,2rem)}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Checklist structures per design */
+.count{display:none;font-weight:800;color:var(--fg)}
+.jn{display:none}
+[data-design="2"] main{counter-reset:stage}
+[data-design="2"] .stage{counter-increment:stage;border:1px solid var(--line);background:rgba(255,255,255,.55);padding:.8rem 1rem;margin:1rem 0}
+[data-design="2"] .stage h2{margin-top:0}[data-design="2"] .stage h2::before{content:"Section " counter(stage) ". ";color:var(--accent)}
+@media (prefers-color-scheme:dark){[data-design="2"] .stage{background:transparent}}
+[data-design="3"] .stage .tick li{display:grid;grid-template-columns:auto 1fr 8rem;gap:.6rem;align-items:start;border-bottom:1px solid var(--line);padding:.45rem 0;margin:0}
+[data-design="3"] .stage .tick li::after{content:"Not checked";font-family:ui-monospace,monospace;font-size:.9rem;text-transform:uppercase;color:var(--muted)}
+[data-design="3"] .stage .tick li:has(input:checked)::after{content:"Pass";color:var(--accent);font-weight:700}
+@media (max-width:40rem){[data-design="3"] .stage .tick li{grid-template-columns:auto 1fr}[data-design="3"] .stage .tick li::after{grid-column:2}}
+[data-design="4"] .stage{border:4px solid currentColor;padding:.8rem 1rem;margin:1rem 0;background:#fff}
+[data-design="4"] .count{display:block;font-size:clamp(1.8rem,7vw,2.6rem);font-weight:900;line-height:1.1;margin:.2rem 0 .6rem}
+@media (prefers-color-scheme:dark){[data-design="4"] .stage{background:#2a2711}}
+[data-design="5"] main{counter-reset:jn}
+[data-design="5"] .stage{border-left:6px solid #0057a8;padding-left:1rem;margin:1.2rem 0;counter-increment:jn}
+[data-design="5"] .stage h2{border-left:0;padding-left:0}
+[data-design="5"] .jn{display:inline-block;min-width:2.6rem;text-align:center;background:#0057a8;color:#fff;font-weight:800;border-radius:3px;padding:.05rem .3rem;margin-right:.5rem;font-size:1rem}
+[data-design="5"] .jn::before{content:"J" counter(jn)}
+[data-design="5"] .stage .tick li::before{content:"\25CF";color:#00703c;margin-right:.1rem}
+[data-design="5"] .stage[data-stage="v"] .tick li::before{content:"\25A0";color:#0057a8}
+.fig-empty{font-size:clamp(1.1rem,3.5vw,1.4rem)!important;font-family:inherit!important;font-weight:800;white-space:normal!important;opacity:.85}
+.k-ldn{color:#b42318}
+@media (max-width:40rem){.fv .btn{display:block;width:max-content;margin-bottom:.5rem}}
