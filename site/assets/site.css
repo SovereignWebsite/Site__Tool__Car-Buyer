@@ -219,3 +219,7 @@ html{accent-color:var(--accent)}
 .navdesigns{font-weight:400!important}
 @media (prefers-color-scheme:dark){.illus svg [style*="#bcd9f2"]{fill:#2b4a66!important}}
 .own{flex-wrap:wrap;row-gap:.2rem}
+
+[data-design="3"] .stage .tick li::after{content:"Not yet"}
+[data-design="3"] .stage .tick li:has(input:checked)::after{content:"Done"}
+[data-design="5"] .jn::before{content:counter(jn, upper-alpha)}
