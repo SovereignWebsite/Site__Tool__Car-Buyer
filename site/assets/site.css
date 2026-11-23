@@ -239,3 +239,6 @@ html{accent-color:var(--accent)}
 [data-design="5"] .jn{min-width:5.5rem}
 @media (max-width:40rem){[data-design="3"] .stage .tick li:not(:has(input:checked))::after{content:"Not yet"}}
 [data-design="5"] .stage .tick li::before{display:inline-block;width:1.2rem;text-align:center}
+.bigmap svg.map-tall{display:none}
+@media (max-width:600px){.bigmap svg.map-wide{display:none}.bigmap svg.map-tall{display:block}}
+@media (max-width:40rem){[data-design="3"] .stage .tick li::after{font-size:1rem}}
