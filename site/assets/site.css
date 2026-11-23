@@ -71,3 +71,7 @@ button.danger{background:transparent;color:#b42318;border-color:#b42318}
 .small{font-size:.85rem;color:var(--muted);font-weight:400}
 td,th{overflow-wrap:normal;word-break:normal;hyphens:manual}
 @media (max-width:40rem){.cards table,.cards tbody,.cards tr,.cards td{display:block;width:100%}.cards tr:first-child{display:none}.cards tr{border-bottom:1px solid var(--line);padding:.6rem 0}.cards td{border:0;padding:.1rem 0}.cards td:first-child{font-weight:600}}
+
+.hint{color:inherit;font-weight:400}
+.printonly{display:none}
+@media print{.family-credit,.top,.site-links,footer,button,.btn,label.btn,.row,.skip,.note{display:none!important}.printonly{display:block;white-space:pre-wrap;border:1px solid #999;padding:.6rem;margin:1rem 0}body{background:#fff;color:#000;font-size:12pt}main{padding:0}a{color:#000}}

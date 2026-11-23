@@ -39,6 +39,19 @@
     });
   }
 
+
+  // Age identifier (DVLA INF104): AB12 CDE format since September 2001.
+  function ageOf(r) {
+    var m = /^[A-Z]{2}(\d{2})[A-Z]{3}$/.exec(r); if (!m) return '';
+    var n = parseInt(m[1], 10), y, from, to;
+    if (n >= 51) { y = 2000 + n - 50; from = 'September ' + y; to = 'February ' + (y + 1); }
+    else if (n >= 2) { y = 2000 + n; from = 'March ' + y; to = 'August ' + y; }
+    else return '';
+    return 'Age identifier ' + m[1] + ': issued between ' + from + ' and ' + to + '. A private number can make a car look older, never younger, so check the first registration date with DVLA.';
+  }
+  var ageEl = $('age');
+  if (ageEl && reg) { var upd = function () { ageEl.textContent = ageOf(norm(reg.value)); }; reg.addEventListener('input', upd); upd(); }
+
   // Checklist
   var sel = $('car');
   if (sel) {
@@ -49,8 +62,11 @@
       var car = current() || data.cars[0]; if (car) data.current = car.reg;
       document.querySelectorAll('[data-tick]').forEach(function (b) { b.checked = !!(car && car.ticks && car.ticks[b.dataset.tick]); });
     }
-    fill();
-    sel.addEventListener('change', function () { data.current = sel.value; save(data); fill(); });
+    var pn = $('printnotes');
+    function notesOut() { var car = current(); if (pn) pn.textContent = car ? (car.reg + (car.label ? ' (' + car.label + ')' : '') + '\n' + (car.notes || '')) : ''; }
+    fill(); notesOut();
+    if ($('print')) $('print').addEventListener('click', function () { notesOut(); window.print(); });
+    sel.addEventListener('change', function () { data.current = sel.value; save(data); fill(); notesOut(); });
     document.querySelectorAll('[data-tick]').forEach(function (b) {
       b.addEventListener('change', function () {
         var car = current(); if (!car) { b.checked = false; say('Add a car first, on Check a car.'); return; }
