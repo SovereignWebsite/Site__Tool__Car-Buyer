@@ -214,3 +214,8 @@ html{accent-color:var(--accent)}
  [data-design="5"] .stage .tick li[data-kind="ldn"]::before,.mk-ldn,.k-ldn{color:#ff8f86}
  .illus svg [fill="#cfe3f5"]{fill:#2b4a66}
 }
+
+.illus-sm svg{max-width:24rem}
+.navdesigns{font-weight:400!important}
+@media (prefers-color-scheme:dark){.illus svg [style*="#bcd9f2"]{fill:#2b4a66!important}}
+.own{flex-wrap:wrap;row-gap:.2rem}
