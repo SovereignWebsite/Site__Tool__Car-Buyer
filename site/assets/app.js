@@ -108,7 +108,7 @@
     if (w) { $('ws-reg').textContent = w.reg; $('ws-reg').classList.remove('fig-empty'); $('ws-age').classList.remove('fig-empty'); var a = ageOf(w.reg); var m = /between (.+?) and (.+?)\./.exec(a); if (m) { var f = m[1].split(' '), e = m[2].split(' '); $('ws-age').textContent = f[1] === e[1] ? f[0].slice(0, 3) + ' to ' + e[0].slice(0, 3) + ' ' + e[1] : f[0].slice(0, 3) + ' ' + f[1] + ' to ' + e[0].slice(0, 3) + ' ' + e[1]; } }
     var t = 0, has = false;
     Object.keys(data.costs || {}).forEach(function (k) { var v = parseFloat(data.costs[k]) || 0; if (v) has = true; t += k === 'ulezdays' ? v * 12.5 : k === 'ccdays' ? v * 18 : v; });
-    if (has) { $('ws-cost').textContent = '£' + Math.round(t).toLocaleString('en-GB'); $('ws-cost').classList.remove('fig-empty'); }
+    if (has) { $('ws-cost').textContent = '£' + Math.round(t).toLocaleString('en-GB'); var hh = $('ws-cost-hint'); if (hh) hh.textContent = 'a year, from your figures'; }
   }
 
   // Costs

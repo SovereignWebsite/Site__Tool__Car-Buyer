@@ -174,3 +174,29 @@ html[data-design] button.danger{background:transparent;color:#b42318;border:2px 
 .fig-empty{font-size:clamp(1.1rem,3.5vw,1.4rem)!important;font-family:inherit!important;font-weight:800;white-space:normal!important;opacity:.85}
 .k-ldn{color:#b42318}
 @media (max-width:40rem){.fv .btn{display:block;width:max-content;margin-bottom:.5rem}}
+
+/* Round 6 */
+.draft{font-size:.95rem;margin:0 0 .6rem;color:var(--fg)}
+footer .chooser{margin:0 0 1rem;font-size:1rem}
+html{accent-color:var(--accent)}
+.cl-key{display:none}
+/* Logbook: numbered fields 1.1, 1.2 */
+[data-design="2"] .stage{counter-reset:item}
+[data-design="2"] .stage .tick li{counter-increment:item;border-bottom:1px solid var(--line);padding:.35rem 0}
+[data-design="2"] .stage .tick li::before{content:counter(stage) "." counter(item);font-weight:700;color:var(--accent);min-width:2.4rem}
+/* MOT: result at body size in the design's green */
+[data-design="3"] .stage .tick li::after{font-size:inherit}
+[data-design="3"] .stage .tick li:has(input:checked)::after{color:var(--accent)}
+/* Windscreen: ruled lines under each item */
+[data-design="4"] .stage .tick li{border-bottom:2px solid currentColor;padding:.45rem 0;margin:0}
+[data-design="4"] .stage .tick li:last-child{border-bottom:0}
+/* Road atlas: a rail through the items, a marker by kind */
+[data-design="5"] .cl-key{display:block}
+[data-design="5"] .stage .tick{border-left:4px solid #0057a8;margin-left:.3rem;padding-left:.9rem}
+[data-design="5"] .stage .tick li::before,[data-design="5"] .stage[data-stage="v"] .tick li::before{content:"\25A0";color:#0057a8}
+[data-design="5"] .stage .tick li[data-kind="off"]::before{content:"\25CF";color:#00703c}
+[data-design="5"] .stage .tick li[data-kind="paid"]::before{content:"\25C6";color:#b45309}
+[data-design="5"] .stage .tick li[data-kind="ldn"]::before{content:"\25B2";color:#b42318}
+.mk{color:#0057a8}.mk-off{color:#00703c}.mk-paid{color:#b45309}.mk-ldn{color:#b42318}
+@media (prefers-color-scheme:dark){[data-design="5"] .stage .tick li[data-kind="off"]::before,.mk-off,.k-off{color:#5fd38d}}
+.fig-hint{display:block;font-size:1rem;font-weight:700;margin-top:.2rem}
