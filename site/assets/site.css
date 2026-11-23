@@ -226,3 +226,7 @@ html{accent-color:var(--accent)}
 
 .bigmap{width:min(100vw - 2rem, 64rem);margin-left:50%;transform:translateX(-50%)}
 .bigmap svg{max-width:none;width:100%;border:3px solid #0057a8;border-radius:6px}
+
+[data-design="5"] .stage{border-left:14px solid #0057a8;box-shadow:inset 3px 0 0 #0d1b2a;position:relative}
+[data-design="5"] .stage::before{content:"";position:absolute;left:-8px;top:0;bottom:0;border-left:2px dashed #fff}
+[data-design="5"] .stage .tick{border-left:0}
