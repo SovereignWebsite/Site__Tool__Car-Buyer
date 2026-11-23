@@ -200,3 +200,17 @@ html{accent-color:var(--accent)}
 .mk{color:#0057a8}.mk-off{color:#00703c}.mk-paid{color:#b45309}.mk-ldn{color:#b42318}
 @media (prefers-color-scheme:dark){[data-design="5"] .stage .tick li[data-kind="off"]::before,.mk-off,.k-off{color:#5fd38d}}
 .fig-hint{display:block;font-size:1rem;font-weight:700;margin-top:.2rem}
+/* Round 7: illustrations, phone labels, dark markers */
+.illus{margin:1rem 0 1.4rem}.illus svg{display:block;width:100%;max-width:30rem;height:auto}
+.illus figcaption{font-size:.85rem;color:var(--muted);margin-top:.2rem}
+@media (max-width:40rem){
+ .results td[data-label]::before{content:attr(data-label) ": ";font-weight:700;color:var(--fg)}
+ [data-design="3"] .stage .tick li{grid-template-columns:auto 1fr auto}
+ [data-design="3"] .stage .tick li::after{grid-column:auto;font-size:.8rem}
+ [data-design="3"] .stage .tick li:not(:has(input:checked))::after{content:""}
+}
+@media (prefers-color-scheme:dark){
+ [data-design="5"] .stage .tick li[data-kind="paid"]::before,.mk-paid,.k-paid{color:#f5a65b}
+ [data-design="5"] .stage .tick li[data-kind="ldn"]::before,.mk-ldn,.k-ldn{color:#ff8f86}
+ .illus svg [fill="#cfe3f5"]{fill:#2b4a66}
+}
