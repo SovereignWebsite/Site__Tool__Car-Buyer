@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Check a car, Car buyer</title>
+<meta name="description" content="Type a registration once, then open each official check on the car: DVLA vehicle details, DVSA MOT history, TfL charges, recalls.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Car buyer">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://car-buyer.tool.sovereignweb.site/check/">
+<meta property="og:title" content="Check a car, Car buyer">
+<meta property="og:description" content="Type a registration once, then open each official check on the car: DVLA vehicle details, DVSA MOT history, TfL charges, recalls.">
+<meta property="og:image" content="https://car-buyer.tool.sovereignweb.site/assets/share/card-1200x630.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Car buyer: a toolkit for buying a used car in the UK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Check a car, Car buyer">
+<meta name="twitter:description" content="Type a registration once, then open each official check on the car: DVLA vehicle details, DVSA MOT history, TfL charges, recalls.">
+<meta name="twitter:image" content="https://car-buyer.tool.sovereignweb.site/assets/share/card-1200x630.jpg">
+<link rel="canonical" href="https://car-buyer.tool.sovereignweb.site/check/">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<details class="family-credit">
+  <summary>Sovereign Website</summary>
+  <ul>
+    <li><a href="/start/">Start here</a></li>
+    <li><a href="/agents/">Use with your AI</a></li>
+    <li class="family-gap"><a href="/admin/">How this site was made</a></li>
+    <li><a href="https://sovereignwebsite.ai/">Sovereign Website</a></li>
+    <li><a href="https://sovereignwebsite.org/">Principles</a></li>
+    <li><a href="https://sovereignwebsite.site/">Hosted</a></li>
+    <li><a href="https://hub.sovereignweb.site/">Hub</a></li>
+    <li><a href="https://agents.sovereignweb.site/">Agents</a></li>
+    <li><a href="https://vault.sovereignwebsite.site/">Vault</a></li>
+    <li><a href="https://agenticcells.ai/">AgentiCCells</a></li>
+    <li><a href="https://riskmandate.ai/">RiskMandate</a></li>
+    <li><a href="https://newsroom.sgit.ai/">Newsroom</a></li>
+  </ul>
+</details>
+<header class="top">
+  <a class="name" href="/">Car buyer</a>
+  <nav class="own" aria-label="This site"><a href="/check/" aria-current="page">Check</a><a href="/checklist/">Checklist</a><a href="/plate/">Plates</a><a href="/costs/">Costs</a><a href="/sources/">Sources</a></nav>
+</header>
+<main id="main">
+<div class="mark">Check a car</div>
+<h1>Check a car before you buy it</h1>
+<p class="lede">Type the registration. Each button copies it and opens the official check in a new tab, where you paste it. This site sends the registration nowhere.</p>
+<form class="reg" id="regform">
+<div><label for="reg">Registration</label><input id="reg" class="plate" name="reg" autocomplete="off" spellcheck="false" maxlength="10" placeholder="AB12 CDE"></div>
+<div><label for="label">Your name for it (optional)</label><input id="label" name="label" placeholder="e.g. the blue one in Ealing"></div>
+<button type="submit">Save this car</button>
+</form>
+<p class="status" id="status" role="status"></p>
+<h2>The free official checks</h2>
+<ul class="checks"><li><span><strong>Vehicle details and tax status</strong> (DVLA)</span><span class="what">Make, colour, fuel, engine size, first registration, tax and MOT status. Compare them with the advert and the logbook (V5C).</span><a class="btn go" href="https://vehicleenquiry.service.gov.uk/" target="_blank" rel="noopener" data-copy>Copy and open</a></li><li><span><strong>MOT history</strong> (DVSA)</span><span class="what">Every test since 2005 in Great Britain: dates, mileage, failures and advisories. Look for mileage that goes down or gaps, and repeated advisories on rust, brakes or tyres.</span><a class="btn go" href="https://www.gov.uk/check-mot-history" target="_blank" rel="noopener" data-copy>Copy and open</a></li><li><span><strong>London charges</strong> (TfL)</span><span class="what">Whether ULEZ applies to this exact car. Use TfL's answer, not a guess from the car's age.</span><a class="btn go" href="https://tfl.gov.uk/modes/driving/check-your-vehicle/" target="_blank" rel="noopener" data-copy>Copy and open</a></li><li><span><strong>Recalls</strong> (DVSA)</span><span class="what">Any safety recall on the make and model, and whether it was fixed.</span><a class="btn go" href="https://www.gov.uk/check-vehicle-recall" target="_blank" rel="noopener" data-copy>Copy and open</a></li><li><span><strong>Insurance on the database</strong> (MIB)</span><span class="what">Only for a car you own or may legally drive. It does not prove that you are covered.</span><a class="btn go" href="https://www.mib.org.uk/check-insurance-details/" target="_blank" rel="noopener" data-copy>Copy and open</a></li><li><span><strong>The dealer, if it is a company</strong> (Companies House)</span><span class="what">The company's status and details. It is not a quality guarantee.</span><a class="btn go" href="https://find-and-update.company-information.service.gov.uk/" target="_blank" rel="noopener" data-copy>Copy and open</a></li></ul>
+<h2>Your notes on this car</h2>
+<label for="notes">Mileage readings, advisories, questions for the seller</label>
+<textarea id="notes"></textarea>
+<div class="row"><a class="btn" href="/checklist/">Open its checklist</a></div>
+<h2>Not in the free checks</h2>
+<p>Outstanding finance, reported theft and insurance write-offs are in paid history checks from commercial providers. Check which databases a report covers and when it was run. No report shows every past accident or repair, and none replaces matching the VIN on the car to the V5C. (<a href="https://www.gov.uk/checks-when-buying-a-used-car">GOV.UK</a>.) More on <a href="/plate/">what a plate tells you</a>.</p>
+
+<footer>
+<nav class="site-links" aria-label="About this site">
+  <a href="/start/">Start here</a>
+  <a href="/agents/">Use with your AI</a>
+  <a href="/admin/">How this site was made</a>
+  <a href="/policy/">How this site is governed</a>
+</nav>
+Not legal or financial advice, and not affiliated with DVLA, DVSA, TfL or any other body named here: it points you to their own services. Sources read on 23 November 2026; rates and terms change, so check each source before you rely on it. No cookies, no tracking: what you type stays in this browser. A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: <a href="https://github.com/SovereignWebsite/Site__Tool__Car-Buyer">github.com/SovereignWebsite/Site__Tool__Car-Buyer</a>. Text licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</footer>
+</main>
+<script src="/assets/app.js" defer></script>
+</body>
+</html>

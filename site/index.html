@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Car buyer: a toolkit for buying a used car in the UK</title>
-<meta name="description" content="A checklist, the official checks (DVLA, DVSA MOT history, TfL, recalls) and an ownership cost sheet for buying a used car in the UK. Static and public; your notes stay in your browser.">
+<meta name="description" content="A checklist, the official checks (DVLA, DVSA MOT history, TfL, recalls) and an ownership cost sheet for buying a used car in the UK. Your notes stay in your browser.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Car buyer: a toolkit for buying a used car in the UK">
+<meta property="og:site_name" content="Car buyer">
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://car-buyer.tool.sovereignweb.site/">
 <meta property="og:title" content="Car buyer: a toolkit for buying a used car in the UK">
-<meta property="og:description" content="A checklist, the official checks (DVLA, DVSA MOT history, TfL, recalls) and an ownership cost sheet for buying a used car in the UK. Static and public; your notes stay in your browser.">
+<meta property="og:description" content="A checklist, the official checks (DVLA, DVSA MOT history, TfL, recalls) and an ownership cost sheet for buying a used car in the UK. Your notes stay in your browser.">
 <meta property="og:image" content="https://car-buyer.tool.sovereignweb.site/assets/share/card-1200x630.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
@@ -18,50 +18,10 @@
 <meta property="og:image:alt" content="Car buyer: a toolkit for buying a used car in the UK">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Car buyer: a toolkit for buying a used car in the UK">
-<meta name="twitter:description" content="A checklist, the official checks (DVLA, DVSA MOT history, TfL, recalls) and an ownership cost sheet for buying a used car in the UK. Static and public; your notes stay in your browser.">
+<meta name="twitter:description" content="A checklist, the official checks (DVLA, DVSA MOT history, TfL, recalls) and an ownership cost sheet for buying a used car in the UK. Your notes stay in your browser.">
 <meta name="twitter:image" content="https://car-buyer.tool.sovereignweb.site/assets/share/card-1200x630.jpg">
 <link rel="canonical" href="https://car-buyer.tool.sovereignweb.site/">
-<style>
-:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5c57;--accent:#2f6b4f;--line:#e4e1d8}
-@media (prefers-color-scheme:dark){:root{--bg:#141513;--fg:#ecebe6;--muted:#a8a69e;--accent:#7fc3a0;--line:#2c2d29}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
-main{max-width:44rem;margin:0 auto;padding:10vh 1rem 4rem}
-.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem}
-.mark{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:600}
-h1{font-size:clamp(2rem,6vw,3rem);line-height:1.1;margin:.4rem 0 1rem}
-p{color:var(--muted);margin:0 0 1rem}a{color:var(--accent)}
-footer{margin-top:3rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
-/* The Sovereign Website credit on a customer's site: one small, muted control at the far top right that opens a
-   pop-up menu of the family links. Not a strip and not a menu bar: the site is about its owner (Dinis, 20 November
-   2026: "It needs to fundamentally be about the site and who is it about ... top right pop-up menu").
-   CSS only (details/summary), so no script and no CSP issue. It sits in the page's corner, above the owner's header;
-   a site whose own header uses that corner moves it with --family-top / --family-right.
-   To remove it, the owner sets one attribute: <html data-family-credit="off">. */
-.family-credit{--fam-fg:var(--family-fg,#5a5a5a);--fam-strong:var(--family-fg-strong,#111);--fam-bg:var(--family-bg,#fff);
-  position:absolute;top:var(--family-top,.4rem);right:var(--family-right,.75rem);z-index:50;font-size:.75rem;line-height:1.4}
-@media (prefers-color-scheme:dark){.family-credit{--fam-fg:var(--family-fg,#b5b5b5);--fam-strong:var(--family-fg-strong,#fff);--fam-bg:var(--family-bg,#1c1c1c)}}
-.family-credit summary{display:inline-flex;align-items:center;gap:.3rem;cursor:pointer;color:var(--fam-fg);list-style:none;min-height:24px;padding:.15rem .3rem;border-radius:4px}
-.family-credit summary::-webkit-details-marker{display:none}
-.family-credit summary::after{content:"";width:.35rem;height:.35rem;border:solid currentColor;border-width:0 1px 1px 0;transform:rotate(45deg) translateY(-2px)}
-.family-credit summary:hover,.family-credit summary:focus-visible,.family-credit[open] summary{color:var(--fam-strong)}
-.family-credit ul{position:absolute;right:0;top:100%;margin:.25rem 0 0;padding:.35rem 0;list-style:none;min-width:11rem;
-  background:var(--fam-bg);border:1px solid rgba(127,127,127,.3);border-radius:6px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
-.family-credit a{display:block;padding:.3rem .8rem;min-height:24px;color:var(--fam-fg);text-decoration:none}
-.family-credit a:hover,.family-credit a:focus-visible{color:var(--fam-strong);background:rgba(127,127,127,.1)}
-.family-credit .family-gap{border-bottom:1px solid rgba(127,127,127,.25);padding-bottom:.3rem;margin-bottom:.3rem}
-[data-family-credit="off"] .family-credit{display:none}
-@media print{.family-credit{display:none}}
-.top{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1.5rem;max-width:44rem;margin:0 auto;padding:2.2rem 1rem 0}
-.top .name{font-weight:600;color:var(--fg);text-decoration:none}
-.own{display:flex;gap:1rem;margin-left:auto;font-size:.95rem}
-.own a,.site-links a{color:var(--accent);font-weight:600}
-.site-links{display:flex;flex-wrap:wrap;gap:.25rem 1.25rem;margin-bottom:.8rem;font-size:.95rem}
-@media (max-width:40rem){.own{margin:0;width:100%}}
-h2{font-size:1.25rem;margin:2rem 0 .5rem}ol,ul.plain{color:var(--muted);padding-left:1.2rem}li{margin:.35rem 0}
-pre{background:rgba(127,127,127,.1);padding:.8rem 1rem;border-radius:6px;white-space:pre-wrap;font-size:.9rem;color:var(--fg)}
-code{font-size:.9em}main a,main code{overflow-wrap:anywhere}
-@media (max-width:599px){footer,.family-credit,.family,.site-links{font-size:15px}}
-</style>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -83,17 +43,24 @@ code{font-size:.9em}main a,main code{overflow-wrap:anywhere}
   </ul>
 </details>
 <header class="top">
-  <a class="name" href="/">Car buyer: a toolkit for buying a used car in the UK</a>
-  <nav class="own" aria-label="This site">
-    <a href="/start/">Start here</a>
-    <a href="/agents/">Use with your AI</a>
-  </nav>
+  <a class="name" href="/">Car buyer</a>
+  <nav class="own" aria-label="This site"><a href="/check/">Check</a><a href="/checklist/">Checklist</a><a href="/plate/">Plates</a><a href="/costs/">Costs</a><a href="/sources/">Sources</a></nav>
 </header>
 <main id="main">
-<div class="mark">car-buyer.tool.sovereignweb.site</div>
-<h1>Car buyer: a toolkit for buying a used car in the UK</h1>
-<p>A checklist, the official checks (DVLA, DVSA MOT history, TfL, recalls) and an ownership cost sheet for buying a used car in the UK. Static and public; your notes stay in your browser.</p>
-<p>This site was made by one request to the Sovereign Website pipeline. Its files, its history and its address are in a repository its owner controls, and can move anywhere.</p>
+<div class="mark">A free toolkit</div>
+<h1>Buying a used car in the UK</h1>
+<p class="lede">Find out as much as you can about a car before you pay for it, and drive it home legally. Every check here is an official service, and everything you type stays in your browser.</p>
+<ul class="tools">
+<li><a href="/check/">Check a car</a><p>Type the registration once, then open each official check: DVLA, MOT history, TfL charges, recalls.</p></li>
+<li><a href="/checklist/">Checklist</a><p>Before you commit, at the viewing, and on the day you pay. Ticked per car, kept in this browser.</p></li>
+<li><a href="/plate/">What a plate tells you</a><p>What a number plate can and cannot tell you, and which checks cost money.</p></li>
+<li><a href="/costs/">Costs</a><p>A cost sheet for the first year: insurance, tax, fuel, parking, servicing and a repair reserve.</p></li>
+<li><a href="/sources/">Sources</a><p>Every official source and open dataset behind this site, with its limits.</p></li>
+</ul>
+<h2>The one thing to remember</h2>
+<p>Buying the car, telling DVLA, taxing it and insuring it are separate steps. Before you drive it away you need insurance that covers you, your own vehicle tax (tax does not pass to the buyer), a valid MOT where one is required, the right licence, and a roadworthy car. In London, ULEZ and the Congestion Charge are on top. (<a href="https://www.gov.uk/checks-when-buying-a-used-car">GOV.UK</a>, <a href="https://www.gov.uk/sold-bought-vehicle">GOV.UK</a>.)</p>
+<p class="note">Your registration numbers, notes and ticks are saved only in this browser (its local storage), never sent to us. You can export them as a file and delete them at any time. A number plate can be personal data, so keep it that way.</p>
+
 <footer>
 <nav class="site-links" aria-label="About this site">
   <a href="/start/">Start here</a>
@@ -101,7 +68,8 @@ code{font-size:.9em}main a,main code{overflow-wrap:anywhere}
   <a href="/admin/">How this site was made</a>
   <a href="/policy/">How this site is governed</a>
 </nav>
-A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: <a href="https://github.com/SovereignWebsite/Site__Tool__Car-Buyer">github.com/SovereignWebsite/Site__Tool__Car-Buyer</a>.</footer>
+Not legal or financial advice, and not affiliated with DVLA, DVSA, TfL or any other body named here: it points you to their own services. Sources read on 23 November 2026; rates and terms change, so check each source before you rely on it. No cookies, no tracking: what you type stays in this browser. A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: <a href="https://github.com/SovereignWebsite/Site__Tool__Car-Buyer">github.com/SovereignWebsite/Site__Tool__Car-Buyer</a>. Text licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</footer>
 </main>
+
 </body>
 </html>
