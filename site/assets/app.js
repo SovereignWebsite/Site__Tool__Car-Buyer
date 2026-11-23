@@ -18,7 +18,9 @@
   var form = $('regform'), reg = $('reg'), label = $('label'), notes = $('notes');
   if (form) {
     var c = current();
+    var nb = $('notesbox'); function showNotes() { if (nb) nb.hidden = !current(); }
     if (c) { reg.value = c.reg; label.value = c.label || ''; if (notes) notes.value = c.notes || ''; }
+    showNotes();
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var r = norm(reg.value); if (!r) { say('Type a registration first.'); return; }
@@ -26,6 +28,7 @@
       if (!car) { car = { reg: r, label: '', notes: '', ticks: {} }; data.cars.push(car); }
       car.label = label.value.trim(); data.current = r; reg.value = r;
       say(save(data) ? 'Saved ' + r + ' in this browser.' : 'This browser would not save it (private mode?), but the checks still work.');
+      showNotes();
     });
     if (notes) notes.addEventListener('input', function () {
       var car = current(); if (!car) { say('Save the car first, then your notes are kept with it.'); return; }
@@ -33,8 +36,9 @@
     });
     document.querySelectorAll('a[data-copy]').forEach(function (a) {
       a.addEventListener('click', function () {
-        var r = norm(reg.value); if (!r) return;
-        if (navigator.clipboard) navigator.clipboard.writeText(r).then(function () { say(r + ' copied: paste it into the page that opened.'); }, function () {});
+        var r = norm(reg.value); if (!r) { say('Type the registration first, so it can be copied.'); return; }
+        say('Copied: ' + r + '. Paste it into the page that opened.');
+        if (navigator.clipboard) navigator.clipboard.writeText(r).catch(function () { say(r + ': copy it by hand, this browser would not.'); });
       });
     });
   }
@@ -65,7 +69,7 @@
     var pn = $('printnotes');
     function notesOut() { var car = current(); if (pn) pn.textContent = car ? (car.reg + (car.label ? ' (' + car.label + ')' : '') + '\n' + (car.notes || '')) : ''; }
     fill(); notesOut();
-    if ($('print')) $('print').addEventListener('click', function () { notesOut(); window.print(); });
+    if ($('print')) $('print').addEventListener('click', function () { notesOut(); if (!current()) document.querySelectorAll('[data-tick]').forEach(function (b) { b.checked = false; }); window.print(); });
     sel.addEventListener('change', function () { data.current = sel.value; save(data); fill(); notesOut(); });
     document.querySelectorAll('[data-tick]').forEach(function (b) {
       b.addEventListener('change', function () {
