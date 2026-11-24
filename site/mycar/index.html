@@ -55,39 +55,52 @@
 <p class="note"><strong>Draft.</strong> This section is new and not yet looked at by the site's owner. Not legal advice: every step names the official page it comes from. Read on 24 November 2026.</p>
 <p class="status" id="status" role="status"></p>
 
+<section class="plate-hero" aria-label="Your car">
+<p class="plate" id="plate-show" aria-live="polite"><span class="plate-gb" aria-hidden="true">GB</span><span id="plate-text">YOUR REG</span></p>
+<p class="small plate-note">A picture of a plate, not an official document. Nothing here is from DVLA or DVSA.</p>
+<div class="next" id="next" aria-live="polite"></div>
+</section>
+
 <section aria-labelledby="h-car">
-<h2 id="h-car">1. Your car</h2>
+<h2 id="h-car">Your car</h2>
 <div class="row"><label for="plate">Number plate</label><input id="plate" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10" size="10"><label for="what">Make and model</label><input id="what" autocomplete="off" maxlength="60"><label for="bought">Bought on</label><input id="bought" type="date"><button type="button" id="save-car">Save</button></div>
 <p class="small">Kept in this browser. If a vault is open below, it is saved there too, encrypted.</p>
 </section>
 
-<section aria-labelledby="h-steps">
-<h2 id="h-steps">2. Your next steps</h2>
+<section aria-labelledby="h-steps" class="steps-sec">
+<h2 id="h-steps">Your next steps</h2>
 <p id="progress" class="small"></p>
+<p class="small disc-note">Paper tax discs ended in 2014. The discs here are only a picture.</p>
 <ul class="tick" id="steps"></ul>
+<details id="done-box" class="donebox" hidden><summary id="done-sum">Done</summary><ul class="tick" id="steps-done"></ul></details>
 </section>
 
 <section aria-labelledby="h-ask">
-<h2 id="h-ask">3. Ask about your next steps</h2>
+<h2 id="h-ask">Ask about your next steps</h2>
 <form id="ask" class="row"><label for="q">Your question</label><input id="q" size="40" maxlength="200" placeholder="Can I drive it home today?"><button type="submit">Find the step</button><button type="button" id="mic" class="quiet" hidden>Speak</button></form>
+<p class="small honest">This finds the matching step in your list. It is not an AI model and sends nothing anywhere. Speak uses your browser's own speech recognition, which on some browsers sends the sound to the browser maker; it starts only when you press it.</p>
 <div id="answer" class="note" aria-live="polite" hidden></div>
-<p class="small">This finds the matching step in your list above. It is not an AI model and sends nothing anywhere. <strong>Speak</strong> uses your browser's own speech recognition, which on some browsers sends the sound to the browser maker; it only starts when you press it. Apple Intelligence cannot be called from a web page that we know of, see <a href="/not-yet/">what we cannot do yet</a>. On an iPhone or Mac you can still use Apple's Writing Tools and dictation in the box above.</p>
+<p class="small">Apple Intelligence cannot be called from a web page that we know of. See <a href="/not-yet/">what we cannot do yet</a>. On an iPhone or Mac, Apple's Writing Tools and dictation still work in the box above.</p>
 </section>
 
 <section aria-labelledby="h-vault">
-<h2 id="h-vault">4. Your car vault</h2>
-<p>A vault is an encrypted store (<a href="https://sgit.ai/docs/surfaces.html">how vaults work</a>). The service holding it sees only ciphertext. Your key is made in this browser and never leaves it. The first time you press a button below, this page talks to <code>dev.send.sgraph.ai</code>, the vault service, and to nothing else.</p>
-<div class="vcols">
-<div><h3>Send this</h3><p class="small">Your public key. It is safe to share: it only lets someone seal a message that this browser alone can open.</p><button type="button" id="mk-key">Make my key</button><div id="keybox" hidden><img id="keyqr" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your public key as a QR code" width="220" height="220"><p><button type="button" id="copy-key" class="quiet">Copy key text</button></p></div></div>
-<div><h3>Drop what you get back</h3><p class="small">A sealed code from the person who set you up: paste the text, or choose the picture of the QR code.</p><label for="sealed">Sealed code</label><textarea id="sealed" rows="3" spellcheck="false"></textarea><p><button type="button" id="open-sealed">Open it</button> <label class="btn quiet" for="qrfile">Choose a QR picture</label><input id="qrfile" type="file" accept="image/*" hidden></p></div>
-</div>
-<h3>Create your vault</h3>
-<p class="small">You need an SG/Send access token, from whoever gave you access. It is used once, for this call only, and not stored.</p>
+<h2 id="h-vault">Your car vault</h2>
+<p>Keep this in a private vault: encrypted, and only you can open it. <span id="vstate" class="vstate">No vault open.</span></p>
+<p><button type="button" id="vault-go" aria-expanded="false" aria-controls="vault-panel">Set one up</button></p>
+<div id="vault-panel" hidden>
+<p class="small">The vault service holds only ciphertext. Your key is made in this browser and never leaves it. Nothing contacts <code>dev.send.sgraph.ai</code>, the vault service, until you press Create, Open or Save. <a href="https://sgit.ai/docs/surfaces.html">How vaults work</a>.</p>
+<h3>1. Make your key</h3>
+<p class="small">Your public key is safe to share: it only lets someone seal a message that this browser alone can open.</p><button type="button" id="mk-key">Make my key</button><div id="keybox" hidden><img id="keyqr" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your public key as a QR code" width="220" height="220"><p><button type="button" id="copy-key" class="quiet">Copy key text</button></p></div>
+<h3>2. If someone sent you a sealed code</h3>
+<label for="sealed">Sealed code</label><textarea id="sealed" rows="3" spellcheck="false"></textarea><p><button type="button" id="open-sealed">Open it</button> <label class="btn quiet" for="qrfile">Choose a QR picture</label><input id="qrfile" type="file" accept="image/*" hidden></p>
+<h3>3. Create your vault</h3>
+<p class="small">You need an SG/Send access token from whoever gave you access. It is used once, for this call only, and not stored.</p>
 <div class="row"><label for="token">Access token</label><input id="token" type="password" autocomplete="off" spellcheck="false" size="30"><button type="button" id="create">Create my car vault</button></div>
 <p id="keyshow" class="note" hidden></p>
-<h3>Open a vault you have</h3>
+<h3>Or open a vault you have</h3>
 <div class="row"><label for="vkey">Vault key</label><input id="vkey" type="password" autocomplete="off" spellcheck="false" size="30"><button type="button" id="open-vault">Open</button><button type="button" id="save-vault" class="quiet" disabled>Save to vault</button></div>
-<p class="small" id="vstate">No vault open.</p>
+</div>
+<p class="small"><a href="/not-yet/">What we cannot do yet</a></p>
 </section>
 
 <footer>

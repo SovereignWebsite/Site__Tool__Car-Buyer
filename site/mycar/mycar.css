@@ -1,7 +1,54 @@
-.vcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem}
+/* My car. One page, five treatments (data-design on <html>): 1 Forecourt (plain), 2 Service book (stamps),
+   3 Dashboard (warning lights), 4 Tax disc (discs), 5 Road atlas (junctions). Words and icons carry every state, never colour alone. */
+.small{font-size:.88rem}textarea{width:100%;max-width:36rem}
 .vcols h3,#h-vault~h3{margin:.5rem 0}
 #keyqr{background:#fff;padding:6px;border-radius:6px;max-width:100%;height:auto}
-.tick li.done .t{text-decoration:line-through;color:var(--muted)}
-.tick .src{font-size:.85rem}
-.small{font-size:.88rem}
-textarea{width:100%;max-width:36rem}
+.vstate{font-weight:600;color:var(--fg)}
+#vault-panel{border:1px solid var(--line);border-radius:10px;padding:.5rem 1rem 1rem;margin:.5rem 0}
+.plate-hero{margin-top:1rem}
+.plate{display:inline-flex;align-items:stretch;margin:0 0 .3rem;border:3px solid #111;border-radius:8px;overflow:hidden;background:#f7d117;color:#111;
+ font:900 clamp(2rem,9vw,3.6rem)/1 "Arial Narrow",Impact,"Helvetica Neue",Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase}
+.plate span{padding:.3rem .7rem;display:block}.plate .plate-gb{background:#0b3d91;color:#fff;font-size:.35em;display:flex;align-items:flex-end;padding:.4rem .5rem;letter-spacing:.1em}
+.plate-note{margin:0 0 1rem}
+.next{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;border:2px solid var(--accent);border-radius:12px;padding:.8rem 1rem;margin:.5rem 0 1rem;background:rgba(127,127,127,.06)}
+.next-l{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}.next strong{flex:1 1 14rem;color:var(--fg)}
+.tick li{position:relative}.tick .tag,.tick .when{display:none}.tick .state{display:block;font-size:.85rem;font-weight:600;color:var(--muted)}
+.tick li.done .t{text-decoration:line-through;color:var(--muted)}.tick .src{font-size:.85rem}
+.donebox{margin:1rem 0}.donebox summary{cursor:pointer;font-weight:600}
+.disc-note{display:none}
+/* 2 Service book: a stamp box that fills with a date stamp */
+[data-design="2"] .tick li{border:1px dashed var(--line);padding:.6rem .8rem;margin:.5rem 0;background:rgba(255,255,255,.4)}
+[data-design="2"] .tick .when{display:block;position:absolute;right:.6rem;top:.5rem;border:3px double var(--accent);color:var(--accent);padding:.1rem .5rem;border-radius:4px;transform:rotate(-6deg);font:700 .8rem ui-monospace,monospace;letter-spacing:.08em}
+[data-design="2"] .tick li.done .when::before{content:"DONE "}
+[data-design="2"] .plate{border-radius:2px;box-shadow:2px 2px 0 var(--fg)}
+@media (prefers-color-scheme:dark){[data-design="2"] .tick li{background:transparent}}
+/* 3 Dashboard: each step is a warning light, lit until done */
+[data-design="3"] .tick{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:.7rem}
+[data-design="3"] .tick li{background:#15171c;color:#e8e8e8;border-radius:12px;padding:.8rem 1rem;border:2px solid #3a3d45;flex-wrap:wrap}
+[data-design="3"] .tick li label,[data-design="3"] .tick li .t{color:#f1f1f1}[data-design="3"] .tick li .t{text-decoration:none}
+[data-design="3"] .tick .state,[data-design="3"] .tick .src a{color:#d9d9d9}
+[data-design="3"] .tick li.todo{border-color:#ffb000}
+[data-design="3"] .tick li.todo .state::before{content:"\26A0  Light on: ";color:#ffb000}
+[data-design="3"] .tick li.done{opacity:.8}[data-design="3"] .tick li.done .state::before{content:"Light off: "}
+[data-design="3"] .tick .tag{display:inline-block;position:absolute;top:.5rem;right:.7rem;font:700 .75rem ui-monospace,monospace;letter-spacing:.1em;color:#ffb000;border:2px solid #ffb000;border-radius:999px;padding:.05rem .5rem}
+[data-design="3"] .tick li.done .tag{color:#8aa;border-color:#8aa}
+[data-design="3"] .next{background:#15171c;color:#fff;border-color:#ffb000}[data-design="3"] .next strong{color:#fff}[data-design="3"] .next-l{color:#ffb000}
+/* 4 Tax disc: a round paper disc in a holder, the date on its rim */
+[data-design="4"] .disc-note{display:block}
+[data-design="4"] .tick{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem}
+[data-design="4"] .tick li{border:3px solid #111;border-radius:12px;background:#fff9d6;padding:.8rem;flex-direction:column;color:#111}
+[data-design="4"] .tick li label,[data-design="4"] .tick li .t,[data-design="4"] .tick .state,[data-design="4"] .tick .src a{color:#111}
+[data-design="4"] .tick .tag{display:flex;align-items:center;justify-content:center;width:4.6rem;height:4.6rem;border-radius:50%;border:4px solid #111;background:#f7d117;font:900 .8rem Arial,sans-serif;color:#111;margin-bottom:.4rem}
+[data-design="4"] .tick li.done .tag{background:#111;color:#f7d117}
+[data-design="4"] .tick .when{display:block;font:700 .75rem ui-monospace,monospace;color:#111}
+[data-design="4"] .plate{width:100%;justify-content:center}
+@media (prefers-color-scheme:dark){[data-design="4"] .tick li{background:#2a2711;color:#fff6c2}[data-design="4"] .tick li label,[data-design="4"] .tick li .t,[data-design="4"] .tick .state,[data-design="4"] .tick .src a,[data-design="4"] .tick .when{color:#fff6c2}}
+/* 5 Road atlas: a road with a junction sign for each step */
+[data-design="5"] .tick{border-left:10px solid #555;margin-left:1.4rem;padding-left:1.6rem}
+[data-design="5"] .tick li{display:block;position:relative;padding:.4rem 0 .9rem}
+[data-design="5"] .tick li::before{content:"J" attr(data-n);position:absolute;left:-3.55rem;top:.3rem;min-width:2.1rem;text-align:center;font:700 .85rem Arial,sans-serif;padding:.2rem .3rem;border-radius:5px;background:#0057a8;color:#fff;border:2px solid #fff}
+[data-design="5"] .tick li.done::before{background:#00703c}
+[data-design="5"] .tick input{position:absolute;left:-1px;top:.3rem;opacity:1}
+[data-design="5"] .tick li{padding-left:1.8rem}
+[data-design="5"] .next{border-radius:6px;border-color:#00703c;background:#00703c;color:#fff}[data-design="5"] .next strong,[data-design="5"] .next-l{color:#fff}[data-design="5"] .next .btn{background:#fff;color:#00703c}
+[data-design="5"] .plate{border-radius:4px}

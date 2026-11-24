@@ -25,24 +25,40 @@ const load = () => { try { const d = JSON.parse(localStorage.getItem(KEY) || 'nu
 let data = load();
 const save = () => { try { localStorage.setItem(KEY, JSON.stringify(data)); } catch (e) { say('This browser would not keep that. Private mode?'); } };
 
+const today = () => new Date().toISOString().slice(0, 10);
+const when = (v) => (typeof v === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v) ? v : '');
+function item(s, n, on) {
+  const li = document.createElement('li'); li.className = on ? 'done' : 'todo'; li.dataset.n = String(n);
+  const cb = document.createElement('input'); cb.type = 'checkbox'; cb.id = 'st-' + s.id; cb.checked = on;
+  cb.addEventListener('change', () => { data.ticks[s.id] = cb.checked ? today() : false; save(); drawSteps(); });
+  const lab = document.createElement('label'); lab.htmlFor = cb.id;
+  const b = document.createElement('strong'); b.className = 't'; b.textContent = s.t;
+  const w = document.createElement('span'); w.textContent = ' ' + s.w;
+  lab.append(b, w);
+  const box = document.createElement('div'); box.append(lab);
+  const st = document.createElement('span'); st.className = 'state'; st.textContent = on ? '\u2713 Done' + (when(data.ticks[s.id]) ? ' ' + when(data.ticks[s.id]) : '') : '\u25CB To do';
+  const src = document.createElement('div'); src.className = 'src';
+  if (s.s) { const a = document.createElement('a'); a.href = s.s; a.rel = 'noopener'; a.textContent = 'Source: ' + s.n; src.append(a); } else src.textContent = s.n;
+  box.append(st, src);
+  const tag = document.createElement('span'); tag.className = 'tag'; tag.setAttribute('aria-hidden', 'true'); tag.textContent = s.tag || s.id.toUpperCase();
+  const when_ = document.createElement('span'); when_.className = 'when'; when_.setAttribute('aria-hidden', 'true'); when_.textContent = on ? when(data.ticks[s.id]) : '';
+  li.append(cb, box, tag, when_); return li;
+}
 function drawSteps() {
-  const ul = $('steps'); ul.textContent = '';
+  const todo = $('steps'), done = $('steps-done'); todo.textContent = ''; done.textContent = '';
   let n = 0;
-  for (const s of STEPS) {
-    const on = !!data.ticks[s.id]; if (on) n++;
-    const li = document.createElement('li'); if (on) li.className = 'done';
-    const cb = document.createElement('input'); cb.type = 'checkbox'; cb.id = 'st-' + s.id; cb.checked = on;
-    cb.addEventListener('change', () => { data.ticks[s.id] = cb.checked; save(); drawSteps(); });
-    const lab = document.createElement('label'); lab.htmlFor = cb.id;
-    const b = document.createElement('strong'); b.className = 't'; b.textContent = s.t;
-    const w = document.createElement('span'); w.textContent = ' ' + s.w;
-    lab.append(b, w);
-    const box = document.createElement('div'); box.append(lab);
-    const src = document.createElement('div'); src.className = 'src';
-    if (s.s) { const a = document.createElement('a'); a.href = s.s; a.rel = 'noopener'; a.textContent = 'Source: ' + s.n; src.append(a); } else src.textContent = s.n;
-    box.append(src); li.append(cb, box); ul.append(li);
-  }
-  $('progress').textContent = `${n} of ${STEPS.length} done.` + (data.plate ? ` Plate ${data.plate}.` : '');
+  STEPS.forEach((s, i) => { const on = !!data.ticks[s.id]; if (on) { n++; done.append(item(s, i + 1, true)); } else todo.append(item(s, i + 1, false)); });
+  $('done-box').hidden = n === 0; $('done-sum').textContent = `Done (${n})`;
+  $('progress').textContent = `${n} of ${STEPS.length} done, ${STEPS.length - n} to go.`;
+  $('plate-text').textContent = data.plate || 'YOUR REG';
+  const nx = $('next'); nx.textContent = '';
+  const first = STEPS.find((s) => !data.ticks[s.id]);
+  if (!first) { const p = document.createElement('p'); p.textContent = 'All steps done. Keep an eye on the MOT date.'; nx.append(p); return; }
+  const l = document.createElement('span'); l.className = 'next-l'; l.textContent = 'Next';
+  const t = document.createElement('strong'); t.textContent = first.t;
+  nx.append(l, t);
+  if (first.s) { const a = document.createElement('a'); a.className = 'btn quiet'; a.href = first.s; a.rel = 'noopener'; a.textContent = 'Open ' + first.n; nx.append(a); }
+  const d = document.createElement('button'); d.type = 'button'; d.textContent = 'Done'; d.addEventListener('click', () => { data.ticks[first.id] = today(); save(); drawSteps(); }); nx.append(d);
 }
 
 function drawCar() { $('plate').value = data.plate; $('what').value = data.what; $('bought').value = data.bought; }
@@ -63,7 +79,7 @@ $('ask').addEventListener('submit', (e) => {
   e.preventDefault();
   const q = $('q').value, s = find(q), box = $('answer'); box.hidden = false; box.textContent = '';
   if (!s) { box.textContent = 'I could not match that to a step. Try words like tax, insurance, MOT, V5C or London. If your question is not covered, it is written down on the page of things we cannot do yet.'; return; }
-  const st = document.createElement('strong'); st.textContent = s.t + (data.ticks[s.id] ? ' (you have ticked this)' : '');
+  const st = document.createElement('strong'); st.textContent = s.t + (data.ticks[s.id] ? ' (you have done this)' : '');
   box.append(st, ' ' + s.w + ' ');
   if (s.s) { const a = document.createElement('a'); a.href = s.s; a.rel = 'noopener'; a.textContent = s.n; box.append(a); }
 });
@@ -94,7 +110,8 @@ async function writeAll(v, token) {
     await v.pushIfMatch();
   } finally { v._sgSend.token = ''; }
 }
-function show(v) { vault = v; $('save-vault').disabled = !v.writable; $('vstate').textContent = v.writable ? 'Vault open, with write access.' : 'Vault open, read only.'; }
+$('vault-go').addEventListener('click', () => { const p = $('vault-panel'); p.hidden = !p.hidden; $('vault-go').setAttribute('aria-expanded', String(!p.hidden)); });
+function show(v) { vault = v; $('save-vault').disabled = !v.writable; $('vstate').textContent = v.writable ? 'A vault is open, with write access.' : 'A vault is open, read only.'; }
 
 $('mk-key').addEventListener('click', async () => {
   try {

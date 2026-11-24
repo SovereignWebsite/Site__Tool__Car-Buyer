@@ -6,8 +6,12 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 - /mycar/ and /not-yet/ built on dev (checks pass locally; Chromium run clean). Vault code is the CRM's pinned copy, untested against the live service (no token).
 - Decision request: site/decisions/requests/2026-11-24__car-buyer-my-car-vault.json (link to decisions.b next).
 
+## Done after design.b's brief (162db44)
+- My car rebuilt to the brief: plate as a picture, one next step first, done steps folded, honesty line under the question box, vault behind one button, link to /not-yet/. Five treatments in CSS: Forecourt plain, Service book stamps, Dashboard warning lights, Tax disc, Road atlas junctions.
+- Still to do from the brief: the other pages in the new looks (the design names in the chooser still say the old ones), the wayfinder, an axe run, security.b review of the vault panel.
+
 ## Asked by Dinis, not yet done
-- More creative designs (needs design.b brief).
+- More creative designs: the rest of the pages (brief received).
 - Apple Intelligence: no web interface known; in /not-yet/.
 - Sealed token hand-over: needs the owner to issue tokens (question 1 in the request).
 
