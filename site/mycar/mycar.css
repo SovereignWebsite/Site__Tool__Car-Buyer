@@ -52,3 +52,18 @@
 [data-design="5"] .tick li{padding-left:1.8rem}
 [data-design="5"] .next{border-radius:6px;border-color:#00703c;background:#00703c;color:#fff}[data-design="5"] .next strong,[data-design="5"] .next-l{color:#fff}[data-design="5"] .next .btn{background:#fff;color:#00703c}
 [data-design="5"] .plate{border-radius:4px}
+/* Round 13: no sideways scroll on a phone, and a first screen that is each design's own */
+#main input:not([type=checkbox]):not([type=file]),#main select,#main textarea{max-width:100%;min-width:0}
+#q{width:100%;max-width:36rem}
+.row{max-width:100%}
+.plate-hero{padding:.8rem 1rem;border-radius:12px;max-width:100%;overflow:hidden}
+[data-design="2"] .plate-hero{border:2px solid var(--accent);background:rgba(255,255,255,.5);box-shadow:4px 4px 0 var(--accent)}
+[data-design="2"] .plate-hero::before{content:"Service book, inside cover";display:block;font:700 .75rem ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+[data-design="3"] .plate-hero{background:#15171c;color:#eee;border:2px solid #3a3d45}[data-design="3"] .plate-hero .plate-note{color:#d6d6d6}
+[data-design="3"] .plate-hero::before{content:"Dashboard";display:block;font:700 .75rem ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:#ffb000;margin-bottom:.4rem}
+[data-design="4"] .plate-hero{border:4px solid #111;border-radius:50% 50% 12px 12px / 22% 22% 12px 12px;background:linear-gradient(#dff1fb,#f6fbff);color:#111;padding-top:1.6rem;text-align:center}
+[data-design="4"] .plate-hero .plate-note{color:#111}
+[data-design="5"] .plate-hero{background:#e8efe1;border:3px solid #555;background-image:linear-gradient(90deg,transparent 0 47%,#fff 47% 53%,transparent 53%)}
+[data-design="5"] .plate-hero::before{content:"A-road: your plate is the destination";display:block;font:700 .75rem Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0057a8;margin-bottom:.4rem}
+[data-design="5"] .plate-hero .plate-note,[data-design="5"] .plate-hero .plate{position:relative}
+@media (prefers-color-scheme:dark){[data-design="2"] .plate-hero{background:transparent}[data-design="4"] .plate-hero{background:#1b2a33;color:#fff6c2}[data-design="4"] .plate-hero .plate-note{color:#fff6c2}[data-design="5"] .plate-hero{background:#1c261c;background-image:linear-gradient(90deg,transparent 0 47%,#444 47% 53%,transparent 53%)}[data-design="5"] .plate-hero::before{color:#7cb8ff}}

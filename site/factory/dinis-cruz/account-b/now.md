@@ -37,3 +37,7 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 ## Notes
 - The Factory repository was not readable from this session at start, so the area layout follows the guidance text, not a copy of a.factory's files.
 
+
+## Round 13 (2026-11-24T23:03Z)
+- design.b.rounds round 13 (7aef897): holds at 3, M3. Fault: question box 549 px on a 390 px phone. Fixed (358 px, no sideways scroll in five designs, light and dark). First screens made each design's own (cover, dash, windscreen, road). Added site/factory/index.json.
+- Still to do: round 12 fixes, other pages in the new looks, passkey vault.

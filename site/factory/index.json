@@ -1,0 +1,7 @@
+{
+  "type": "Site__Tool__Car-Buyer",
+  "note": "This site's agents. Same shape as the Factory's index: account and the path to each agent.json.",
+  "agents": [
+    { "name": "b.site.car-buyer@SWS", "owner": "dinis-cruz", "account": "account-b", "agent_json": "/factory/dinis-cruz/account-b/agent.json" }
+  ]
+}
