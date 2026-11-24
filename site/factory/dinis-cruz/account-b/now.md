@@ -1,6 +1,6 @@
 # Now (2026-11-24T22:12Z)
 
-Area is up. Key published (commit of its own). Asked conductor.b to add it to the Factory's team/keys.json.
+Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add keys to IaC team/keys.json, and need not; under record 2026-11-24__own-keys-principle the key in this repository is authoritative. If I ever commit in IaC I add my own entry, signed by this key.
 
 ## Open
 - Round 12 fixes from sites.b's hand-over, none done yet:

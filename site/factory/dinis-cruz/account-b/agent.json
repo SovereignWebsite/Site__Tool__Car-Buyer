@@ -11,9 +11,7 @@
     "git_ssh": "SHA256:8WrF/L6sKcGW/hem6tR4iKA6xerYfO/DgsUGD0ixjqE",
     "public": "site/keys/b.site.car-buyer.json"
   },
-  "state": "up, key published, waiting for the Factory to add it",
-  "waiting_on": [
-    {"who": "conductor.b (session_01Kw9UwFkKH5CkDmV8nhSfUD)", "what": "add site/keys/b.site.car-buyer.json to the Factory team/keys.json"}
-  ],
+  "state": "up, key published in this repository (authoritative under the own-keys principle), starting round 12 fixes",
+  "waiting_on": [],
   "updated": "2026-11-24T22:12Z"
 }
