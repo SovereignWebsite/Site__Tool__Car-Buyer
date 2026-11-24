@@ -1,11 +1,14 @@
 {
-  "v": 1,
-  "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtNIYM3+lRxihm2NczW3C\nHLXksOtC7J4liHguFi+zRxZ73Dtw0DGlBXFjJ0JcOav6KKgGHYGst8oLKt6Z+TOy\n4M5AOBSalA+CV5wNM7I+y2UMMUV3bcK4Xw1peT9ZH/PRhuOy+IUmuWVpb7wmND0P\n5fLzXPe9U59obH/iXDO8rU5HwMhPNaWVV+DcNMS0hF0mfv35RH5DCFZbZKK8vala\nu5iZbEKg3csP719JuLVTahU2EIn/KUZymWLLGgDlgUakrJkQnptrf/CZ2ASBxrPe\n+i5POxOXcy+zq1nklQ1XwkR34F7Xw/VmJMuVNZlWUn1z4d9uMOp6S4Ppo3K9QO6O\nH7HHUa99NhozH8T4EpICnu3ZSljFxbvdZXIgn7azA3yNhVWhEuWdQi3tJ2tg5oGm\nZeV0H4+Ysr7rlIEcgDO9z9VUbFnD/WYx2j+CTgD1Wl1XvfbZaZz65cUTacpysNvP\nejNe30effqnxmJknlee27xQ93Q0NkrhMKtswF7tDmeU3AuGq/MtcBash6QgTOZCF\nL7qckpwsic//Na7XTFfqFmdsbWaIA0b1WYWOXIxusmJWEp3HaBbLuaN96xG1elhY\ncXWtXIGYFAXhDpIWki6DoxccFaCKaOyCCy0WNngRpltf+rhcPD5O0OGCAvSrKEf1\nwg1/KCbopAVGU4UKW2b8mgkCAwEAAQ==\n-----END PUBLIC KEY-----\n",
-  "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAENhcVOP/7QeCrx2hR1FF+u8abg67P\nSYrvvrvZLDeGI1IdOpna4Fhwa71pKcSRVoihkfAb2hSb+H4ghHoYzqnqBg==\n-----END PUBLIC KEY-----\n",
-  "label": "b.site.car-buyer@SWS",
-  "fingerprint": "sha256:e7c33c59859b1264",
-  "signing_fingerprint": "sha256:51f51a322b2e43a9",
-  "git_ssh": "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDYXFTj/+0Hgq8doUdRRfrvGm4Ouz0mK77672Sw3hiNSHTqZ2uBYcGu9aSnEkVaIoZHwG9oUm/h+IIR6GM6p6gY= b.site.car-buyer@SWS",
   "agent": "b.site.car-buyer@SWS",
-  "session": "https://claude.ai/code/session_01Kw9UwD7q1eT6t9h8uLFKjE"
+  "session": "https://claude.ai/code/session_01Kw9UwD7q1eT6t9h8uLFKjE",
+  "status": "live",
+  "bundle": {
+    "v": 1,
+    "encrypt": "-----BEGIN PUBLIC KEY-----\nMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtNIYM3+lRxihm2NczW3C\nHLXksOtC7J4liHguFi+zRxZ73Dtw0DGlBXFjJ0JcOav6KKgGHYGst8oLKt6Z+TOy\n4M5AOBSalA+CV5wNM7I+y2UMMUV3bcK4Xw1peT9ZH/PRhuOy+IUmuWVpb7wmND0P\n5fLzXPe9U59obH/iXDO8rU5HwMhPNaWVV+DcNMS0hF0mfv35RH5DCFZbZKK8vala\nu5iZbEKg3csP719JuLVTahU2EIn/KUZymWLLGgDlgUakrJkQnptrf/CZ2ASBxrPe\n+i5POxOXcy+zq1nklQ1XwkR34F7Xw/VmJMuVNZlWUn1z4d9uMOp6S4Ppo3K9QO6O\nH7HHUa99NhozH8T4EpICnu3ZSljFxbvdZXIgn7azA3yNhVWhEuWdQi3tJ2tg5oGm\nZeV0H4+Ysr7rlIEcgDO9z9VUbFnD/WYx2j+CTgD1Wl1XvfbZaZz65cUTacpysNvP\nejNe30effqnxmJknlee27xQ93Q0NkrhMKtswF7tDmeU3AuGq/MtcBash6QgTOZCF\nL7qckpwsic//Na7XTFfqFmdsbWaIA0b1WYWOXIxusmJWEp3HaBbLuaN96xG1elhY\ncXWtXIGYFAXhDpIWki6DoxccFaCKaOyCCy0WNngRpltf+rhcPD5O0OGCAvSrKEf1\nwg1/KCbopAVGU4UKW2b8mgkCAwEAAQ==\n-----END PUBLIC KEY-----\n",
+    "sign": "-----BEGIN PUBLIC KEY-----\nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAENhcVOP/7QeCrx2hR1FF+u8abg67P\nSYrvvrvZLDeGI1IdOpna4Fhwa71pKcSRVoihkfAb2hSb+H4ghHoYzqnqBg==\n-----END PUBLIC KEY-----\n",
+    "label": "b.site.car-buyer@SWS",
+    "fingerprint": "sha256:e7c33c59859b1264",
+    "signing_fingerprint": "sha256:51f51a322b2e43a9"
+  },
+  "git_ssh": "ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDYXFTj/+0Hgq8doUdRRfrvGm4Ouz0mK77672Sw3hiNSHTqZ2uBYcGu9aSnEkVaIoZHwG9oUm/h+IIR6GM6p6gY= b.site.car-buyer@SWS"
 }
