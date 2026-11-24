@@ -10,6 +10,12 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 - My car rebuilt to the brief: plate as a picture, one next step first, done steps folded, honesty line under the question box, vault behind one button, link to /not-yet/. Five treatments in CSS: Forecourt plain, Service book stamps, Dashboard warning lights, Tax disc, Road atlas junctions.
 - Still to do from the brief: the other pages in the new looks (the design names in the chooser still say the old ones), the wayfinder, an axe run, security.b review of the vault panel.
 
+## Documents (asked 24 Nov, after the V5C photo)
+- Vault panel on /mycar/ has Documents: add a picture or PDF (encrypted in the browser into /documents), list, open here, read text only with the browser's own detector. Untested against the live vault (no token) and untested on Apple devices.
+- The photo Dinis sent shows a named private person's address and a document reference number: it is NOT in this repository and must not be. Tests use synthetic data only.
+- Still to do: passkey-made vault (copy the CRM's step).
+- BLOCKED: the pipeline refuses my commits (signer check, see the last report); nothing since cb182e1 is live until Dinis picks an option.
+
 ## Asked by Dinis, not yet done
 - More creative designs: the rest of the pages (brief received).
 - Apple Intelligence: no web interface known; in /not-yet/.

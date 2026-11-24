@@ -99,6 +99,11 @@
 <p id="keyshow" class="note" hidden></p>
 <h3>Or open a vault you have</h3>
 <div class="row"><label for="vkey">Vault key</label><input id="vkey" type="password" autocomplete="off" spellcheck="false" size="30"><button type="button" id="open-vault">Open</button><button type="button" id="save-vault" class="quiet" disabled>Save to vault</button></div>
+<h3 id="h-docs">Documents</h3>
+<p class="small">A photo of your V5C, the receipt, the MOT certificate. Each one is encrypted in this browser before it goes into your vault. This site never receives it. A V5C carries a name, an address and a document reference number that DVLA asks you not to share, so keep it only here.</p>
+<div class="row"><label for="docfile">Choose a document</label><input id="docfile" type="file" accept="image/*,application/pdf"><button type="button" id="add-doc" disabled>Add to vault</button></div>
+<ul id="doclist" class="plain"></ul>
+<div id="docread" class="note" hidden><p class="small" id="docread-state"></p><pre id="doctext"></pre></div>
 </div>
 <p class="small"><a href="/not-yet/">What we cannot do yet</a></p>
 </section>

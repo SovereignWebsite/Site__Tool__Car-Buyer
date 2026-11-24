@@ -111,7 +111,61 @@ async function writeAll(v, token) {
   } finally { v._sgSend.token = ''; }
 }
 $('vault-go').addEventListener('click', () => { const p = $('vault-panel'); p.hidden = !p.hidden; $('vault-go').setAttribute('aria-expanded', String(!p.hidden)); });
-function show(v) { vault = v; $('save-vault').disabled = !v.writable; $('vstate').textContent = v.writable ? 'A vault is open, with write access.' : 'A vault is open, read only.'; }
+// ----- Documents: encrypted into the vault from this browser; the site never sees them -----
+const MAXDOC = 10 * 1024 * 1024;
+const safeName = (n) => String(n).replace(/[^A-Za-z0-9._-]+/g, '-').replace(/^\.+/, '').slice(-80) || 'document';
+async function loadDocs() {
+  const ul = $('doclist'); ul.textContent = '';
+  if (!vault) return;
+  try { if (vault.needsLoading('/documents')) await vault.loadSubTreeOnDemand('/documents'); } catch (e) { /* no folder yet */ }
+  for (const e of vault.listFolder('/documents') || []) {
+    if (e.type !== 'file') continue;
+    const li = document.createElement('li'); li.append(e.name + ' ');
+    const b = document.createElement('button'); b.type = 'button'; b.className = 'quiet'; b.textContent = 'Open here';
+    b.addEventListener('click', () => viewDoc(e.name)); li.append(b); ul.append(li);
+  }
+  if (!ul.children.length) { const li = document.createElement('li'); li.textContent = 'No documents yet.'; ul.append(li); }
+}
+async function viewDoc(name) {
+  try {
+    const bytes = await vault.getFile('/documents', name);
+    const type = /\.pdf$/i.test(name) ? 'application/pdf' : /\.png$/i.test(name) ? 'image/png' : /\.webp$/i.test(name) ? 'image/webp' : 'image/jpeg';
+    const url = URL.createObjectURL(new Blob([bytes], { type }));
+    if (type === 'application/pdf') { const a = document.createElement('a'); a.href = url; a.download = name; a.click(); say('The PDF was downloaded to this device.'); return; }
+    const box = $('docread'); box.hidden = false; $('doctext').textContent = '';
+    let img = $('docimg'); if (!img) { img = document.createElement('img'); img.id = 'docimg'; img.style.maxWidth = '100%'; img.alt = 'The document you opened'; box.prepend(img); }
+    img.src = url;
+    await readText(img);
+  } catch (e) { say('Could not open that document: ' + e.message); }
+}
+// Reading the text on this device, only where the browser itself offers it. Nothing is sent anywhere by this page.
+async function readText(img) {
+  const st = $('docread-state');
+  if ('TextDetector' in window) {
+    try { await img.decode(); const found = await new window.TextDetector().detect(img); $('doctext').textContent = found.map((f) => f.rawValue).join('\n'); st.textContent = found.length ? "Text read by this browser's own detector." : 'The browser found no text.'; return; } catch (e) { /* fall through */ }
+  }
+  st.textContent = 'This browser has no text reader for pages. On an iPhone or Mac in Safari, touch and hold the picture to use Live Text, which is done by Apple on your device. See what we cannot do yet.';
+}
+$('docfile').addEventListener('change', () => { $('add-doc').disabled = !(vault && vault.writable && $('docfile').files[0]); });
+$('add-doc').addEventListener('click', async () => {
+  const f = $('docfile').files[0], token = $('token').value.trim();
+  try {
+    if (!f) throw new Error('choose a document first'); if (!vault || !vault.writable) throw new Error('open your vault with write access first');
+    if (!/^(image\/|application\/pdf)/.test(f.type)) throw new Error('pictures and PDFs only'); if (f.size > MAXDOC) throw new Error('that file is over 10 MB');
+    if (!token) throw new Error('writing needs your access token: paste it above');
+    const name = safeName(f.name), bytes = new Uint8Array(await f.arrayBuffer());
+    vault._sgSend.token = token;
+    try {
+      if (vault.needsLoading('/')) await vault.loadSubTreeOnDemand('/');
+      if (!vault.listFolder('/documents')) await vault.createFolder('/documents');
+      const have = (vault.listFolder('/documents') || []).some((e) => e.name === name);
+      if (have) await vault.updateFile('/documents', name, bytes); else await vault.addFiles([{ folderPath: '/documents', fileName: name, fileData: bytes }]);
+      await vault.pushIfMatch();
+    } finally { vault._sgSend.token = ''; }
+    $('token').value = ''; $('docfile').value = ''; $('add-doc').disabled = true; say('Added to your vault, encrypted.'); loadDocs();
+  } catch (e) { say('Could not add it: ' + e.message); }
+});
+function show(v) { vault = v; $('save-vault').disabled = !v.writable; loadDocs(); $('add-doc').disabled = !(v.writable && $('docfile').files[0]); $('vstate').textContent = v.writable ? 'A vault is open, with write access.' : 'A vault is open, read only.'; }
 
 $('mk-key').addEventListener('click', async () => {
   try {
