@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My car, Car buyer</title>
+<meta name="description" content="Bought a car? Keep your plate, your next steps to make it legal in the UK and your notes in a private vault of your own. Nothing is sent anywhere until you create a vault.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Car buyer">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://car-buyer.tool.sovereignweb.site/mycar/">
+<meta property="og:title" content="My car, Car buyer">
+<meta property="og:description" content="Bought a car? Keep your plate, your next steps to make it legal in the UK and your notes in a private vault of your own. Nothing is sent anywhere until you create a vault.">
+<meta property="og:image" content="https://car-buyer.tool.sovereignweb.site/assets/share/card-1200x630.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Car buyer: a toolkit for buying a used car in the UK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="My car, Car buyer">
+<meta name="twitter:description" content="Bought a car? Keep your plate, your next steps to make it legal in the UK and your notes in a private vault of your own. Nothing is sent anywhere until you create a vault.">
+<meta name="twitter:image" content="https://car-buyer.tool.sovereignweb.site/assets/share/card-1200x630.jpg">
+<link rel="canonical" href="https://car-buyer.tool.sovereignweb.site/mycar/">
+<link rel="stylesheet" href="/assets/site.css">
+<script src="/assets/design.js"></script>
+<link rel="stylesheet" href="/mycar/mycar.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<details class="family-credit">
+  <summary>Sovereign Website</summary>
+  <ul>
+    <li><a href="/start/">Start here</a></li>
+    <li><a href="/agents/">Use with your AI</a></li>
+    <li class="family-gap"><a href="/admin/">How this site was made</a></li>
+    <li><a href="https://sovereignwebsite.ai/">Sovereign Website</a></li>
+    <li><a href="https://sovereignwebsite.org/">Principles</a></li>
+    <li><a href="https://sovereignwebsite.site/">Hosted</a></li>
+    <li><a href="https://hub.sovereignweb.site/">Hub</a></li>
+    <li><a href="https://agents.sovereignweb.site/">Agents</a></li>
+    <li><a href="https://vault.sovereignwebsite.site/">Vault</a></li>
+    <li><a href="https://agenticcells.ai/">AgentiCCells</a></li>
+    <li><a href="https://riskmandate.ai/">RiskMandate</a></li>
+    <li><a href="https://newsroom.sgit.ai/">Newsroom</a></li>
+  </ul>
+</details>
+<header class="top">
+  <a class="name" href="/">Car buyer</a>
+  <nav class="own" aria-label="This site"><a href="/check/">Check</a><a href="/mycar/" aria-current="page">My car</a><a href="/checklist/">Checklist</a><a href="/plate/">Plates</a><a href="/costs/">Costs</a><a href="/sources/">Sources</a><a class="navdesigns" href="/designs/">Designs</a></nav>
+</header>
+<main id="main">
+<div class="mark">My car</div>
+<h1>My car</h1>
+<p class="lede">You have bought a car. Put the plate here, work through the steps that make it legal on the road, and keep it all in a private vault that only you can open.</p>
+<p class="note"><strong>Draft.</strong> This section is new and not yet looked at by the site's owner. Not legal advice: every step names the official page it comes from. Read on 24 November 2026.</p>
+<p class="status" id="status" role="status"></p>
+
+<section aria-labelledby="h-car">
+<h2 id="h-car">1. Your car</h2>
+<div class="row"><label for="plate">Number plate</label><input id="plate" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="10" size="10"><label for="what">Make and model</label><input id="what" autocomplete="off" maxlength="60"><label for="bought">Bought on</label><input id="bought" type="date"><button type="button" id="save-car">Save</button></div>
+<p class="small">Kept in this browser. If a vault is open below, it is saved there too, encrypted.</p>
+</section>
+
+<section aria-labelledby="h-steps">
+<h2 id="h-steps">2. Your next steps</h2>
+<p id="progress" class="small"></p>
+<ul class="tick" id="steps"></ul>
+</section>
+
+<section aria-labelledby="h-ask">
+<h2 id="h-ask">3. Ask about your next steps</h2>
+<form id="ask" class="row"><label for="q">Your question</label><input id="q" size="40" maxlength="200" placeholder="Can I drive it home today?"><button type="submit">Find the step</button><button type="button" id="mic" class="quiet" hidden>Speak</button></form>
+<div id="answer" class="note" aria-live="polite" hidden></div>
+<p class="small">This finds the matching step in your list above. It is not an AI model and sends nothing anywhere. <strong>Speak</strong> uses your browser's own speech recognition, which on some browsers sends the sound to the browser maker; it only starts when you press it. Apple Intelligence cannot be called from a web page that we know of, see <a href="/not-yet/">what we cannot do yet</a>. On an iPhone or Mac you can still use Apple's Writing Tools and dictation in the box above.</p>
+</section>
+
+<section aria-labelledby="h-vault">
+<h2 id="h-vault">4. Your car vault</h2>
+<p>A vault is an encrypted store (<a href="https://sgit.ai/docs/surfaces.html">how vaults work</a>). The service holding it sees only ciphertext. Your key is made in this browser and never leaves it. The first time you press a button below, this page talks to <code>dev.send.sgraph.ai</code>, the vault service, and to nothing else.</p>
+<div class="vcols">
+<div><h3>Send this</h3><p class="small">Your public key. It is safe to share: it only lets someone seal a message that this browser alone can open.</p><button type="button" id="mk-key">Make my key</button><div id="keybox" hidden><img id="keyqr" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Your public key as a QR code" width="220" height="220"><p><button type="button" id="copy-key" class="quiet">Copy key text</button></p></div></div>
+<div><h3>Drop what you get back</h3><p class="small">A sealed code from the person who set you up: paste the text, or choose the picture of the QR code.</p><label for="sealed">Sealed code</label><textarea id="sealed" rows="3" spellcheck="false"></textarea><p><button type="button" id="open-sealed">Open it</button> <label class="btn quiet" for="qrfile">Choose a QR picture</label><input id="qrfile" type="file" accept="image/*" hidden></p></div>
+</div>
+<h3>Create your vault</h3>
+<p class="small">You need an SG/Send access token, from whoever gave you access. It is used once, for this call only, and not stored.</p>
+<div class="row"><label for="token">Access token</label><input id="token" type="password" autocomplete="off" spellcheck="false" size="30"><button type="button" id="create">Create my car vault</button></div>
+<p id="keyshow" class="note" hidden></p>
+<h3>Open a vault you have</h3>
+<div class="row"><label for="vkey">Vault key</label><input id="vkey" type="password" autocomplete="off" spellcheck="false" size="30"><button type="button" id="open-vault">Open</button><button type="button" id="save-vault" class="quiet" disabled>Save to vault</button></div>
+<p class="small" id="vstate">No vault open.</p>
+</section>
+
+<footer>
+<nav class="site-links" aria-label="About this site">
+  <a href="/start/">Start here</a>
+  <a href="/agents/">Use with your AI</a>
+  <a href="/admin/">How this site was made</a>
+  <a href="/policy/">How this site is governed</a>
+  <a href="/yours/">What you can do here</a>
+</nav>
+Not legal or financial advice, and not affiliated with DVLA, DVSA, TfL or any other body named here: it points you to their own services. Sources read on 23 November 2026; rates and terms change, so check each source before you rely on it. No cookies, no tracking: what you type stays in this browser. A sovereign website, made with the <a href="https://sovereignwebsite.org/">open pattern</a>. Source: <a href="https://github.com/SovereignWebsite/Site__Tool__Car-Buyer">github.com/SovereignWebsite/Site__Tool__Car-Buyer</a>. Text licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</footer>
+</main>
+<script defer src="/mycar/vendor/jsqr/1.4.0/jsQR.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-send/sg-send-crypto.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-send/sg-send.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault-crypto.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault-object-store.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault-ref-manager.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault-commit.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault--file-ops.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault--folder-ops.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault--sync.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault--history.js"></script>
+<script defer src="/mycar/vendor/sg-vault/v0.2.3/sg-vault/sg-vault--branches.js"></script>
+<script type="module" src="/mycar/mycar.js"></script>
+</body>
+</html>

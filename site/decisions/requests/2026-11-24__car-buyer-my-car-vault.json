@@ -1,0 +1,22 @@
+{
+  "id": "2026-11-24__car-buyer-my-car-vault",
+  "from": "b.site.car-buyer@SWS",
+  "session": "https://claude.ai/code/session_01Kw9UwD7q1eT6t9h8uLFKjE",
+  "asked_by": "Dinis Cruz, in this session, 24 Nov 2026: a My car section with a vault for someone who has just bought a car, taking the CRM's handshake, plus Apple Intelligence, plus more creative designs",
+  "repository": "SovereignWebsite/Site__Tool__Car-Buyer",
+  "branch": "dev",
+  "change": "New /mycar/ (plate, eight legal next steps each with its source, a question box with optional speech, a vault panel) and /not-yet/ (open list of things we cannot do yet). Vendors the CRM's pinned vault library, pki modules and QR code files into site/mycar/vendor/ unedited. The page calls dev.send.sgraph.ai only when a vault button is pressed. Commit ids: see git log on dev after fc9e595.",
+  "why": "Dinis asked for it. The CRM pattern: the page makes a key pair in the browser, shows the public half as a QR code, accepts a sealed code back, and creates a vault with an SG/Send access token.",
+  "checks_run": ["build.mjs", "share-check.mjs", "quality.mjs (links, no em dashes, leak scan, policy)", "html-validate", "a Chromium run of the page: plate, tick, question, key and QR made, no console errors"],
+  "not_checked": "Creating and writing a real vault: no access token was available to the keeper, which must not read one.",
+  "flags": { "main": false, "money": false, "legal": false, "one_way_door": false, "private_person": false, "unfixed_vulnerability": false, "new_network_call": true, "new_vendored_code": true },
+  "questions": [
+    "1. Who issues SG/Send access tokens to car owners, and may the site ask a visitor to paste their own? (Today: paste, used once, not stored.)",
+    "2. Policy: site/policy/ says what the site does. It now also talks to dev.send.sgraph.ai on a button press. May the owner's policy page say so? (The keeper may not edit site/policy/.)",
+    "3. Apple Intelligence: no web interface is known. Keep the Speak button (browser speech recognition, which may send sound to the browser maker) and the open item in /not-yet/, or remove Speak?",
+    "4. Designs: Dinis wants more creative designs. Ask design.b for a brief for the My car section and the five designs?"
+  ],
+  "options": ["accept as it stands, keeper continues", "accept with changes", "pause the vault panel until a token route is agreed"],
+  "recommendation": "Accept as a draft; the draft notice stays. Answer 1 to 4 and the keeper continues.",
+  "updated": "2026-11-24T22:20Z"
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "vendor-pin/1",
+  "name": "sgit vault library (vault UI)",
+  "version": "v0.2.3",
+  "source": "SGraph-AI__App__Send, sgraph_ai_app_send__ui__vault/v0/v0.2/v0.2.3/_common/js/lib/ (served at dev.vault.sgraph.ai/_common/js/lib/)",
+  "licence": "Apache-2.0 (LICENSE beside this file, from the upstream repository)",
+  "copied": "2026-11-16, by cell.email@AgentiCCells.dinis, from pki.sgit.ai's pinned copy, checked byte-identical to dev.vault.sgraph.ai on the same day",
+  "rule": "Unedited. To update, copy a new upstream version into a new folder and change the pins; scripts/check-app.mjs refuses any file that does not match its pin. The hash is the first 40 hex characters of SHA-256 (the leak scan refuses longer hex).",
+  "why": "https://sgit.ai/docs/vault/vault-from-javascript.html: one code base writes vaults; a site holding keys loads a pinned copy from its own origin.",
+  "files": [
+    {
+      "path": "v0.2.3/sg-send/sg-send-crypto.js",
+      "sha256_prefix": "2c4af16bbaf4f43e7eb0f8298a9cd8338429f99c",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-send/sg-send-crypto.js"
+    },
+    {
+      "path": "v0.2.3/sg-send/sg-send.js",
+      "sha256_prefix": "9bc98e580f5fc1adbf8e2d273181e6afa3bd9a38",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-send/sg-send.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault--branches.js",
+      "sha256_prefix": "bc1eec8bbc2326a73ec1809ed588d26f3fe7511b",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault--branches.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault--file-ops.js",
+      "sha256_prefix": "f114db89754638b5e4ade1dc3f5d4753ac672a43",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault--file-ops.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault--folder-ops.js",
+      "sha256_prefix": "10fea1377422c5368aead040500c28135fafcb91",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault--folder-ops.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault--history.js",
+      "sha256_prefix": "265b215e27216ad25e8fa7c83b47c8307b7990a0",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault--history.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault--sync.js",
+      "sha256_prefix": "b9f521e7b70ca66f6d1197378337f954deea4ed3",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault--sync.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault-commit.js",
+      "sha256_prefix": "e686de3756eaeed185708a6ba96194429afb3067",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault-commit.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault-crypto.js",
+      "sha256_prefix": "f8d31359204a9e333d27444ea2a37c1bb11bbc79",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault-crypto.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault-object-store.js",
+      "sha256_prefix": "a45d7ad0f9dbd91677785c3128a8322d4209cb35",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault-object-store.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault-ref-manager.js",
+      "sha256_prefix": "5b8ea87ace83d59e8954511d9932bd3968020c57",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault-ref-manager.js"
+    },
+    {
+      "path": "v0.2.3/sg-vault/sg-vault.js",
+      "sha256_prefix": "0108884f9b8d539e4c9457190326d64adc5a92c8",
+      "upstream": "https://dev.vault.sgraph.ai/_common/js/lib/sg-vault/sg-vault.js"
+    }
+  ]
+}

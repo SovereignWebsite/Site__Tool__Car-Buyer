@@ -1,0 +1,17 @@
+{
+  "schema": "vendor-pin/1",
+  "name": "jsQR",
+  "version": "1.4.0",
+  "source": "npm package jsqr, version 1.4.0, dist/jsQR.js (https://github.com/cozmo/jsQR)",
+  "licence": "Apache-2.0 (LICENSE beside this file)",
+  "copied": "2026-11-16, by cell.email@AgentiCCells.dinis, from the npm package",
+  "rule": "Unedited. scripts/check-app.mjs refuses any file that does not match its pin.",
+  "why": "To read QR codes (sealed keys and tokens) from the camera or an image, in any browser.",
+  "files": [
+    {
+      "path": "1.4.0/jsQR.js",
+      "sha256_prefix": "bc40c8a15196236b2314db0856f72ca0b49980cd",
+      "upstream": "https://registry.npmjs.org/jsqr/-/jsqr-1.4.0.tgz"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+.vcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.5rem}
+.vcols h3,#h-vault~h3{margin:.5rem 0}
+#keyqr{background:#fff;padding:6px;border-radius:6px;max-width:100%;height:auto}
+.tick li.done .t{text-decoration:line-through;color:var(--muted)}
+.tick .src{font-size:.85rem}
+.small{font-size:.88rem}
+textarea{width:100%;max-width:36rem}

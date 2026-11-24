@@ -1,0 +1,17 @@
+{
+  "schema": "vendor-pin/1",
+  "name": "qrcode-generator",
+  "version": "2.0.4",
+  "source": "Kazuhiko Arase's qrcode-generator 2.0.4 (ES module), as pinned by pki.sgit.ai",
+  "licence": "MIT (header of the file)",
+  "copied": "2026-11-16, by cell.email@AgentiCCells.dinis, from pki.sgit.ai's pinned copy",
+  "rule": "Unedited. scripts/check-app.mjs refuses any file that does not match its pin.",
+  "why": "To show the page's public key as a QR code.",
+  "files": [
+    {
+      "path": "2.0.4/qrcode.mjs",
+      "sha256_prefix": "ea91d7118a5395289170da848b7c6758b996163b",
+      "upstream": "https://pki.sgit.ai/assets/vendor/qrcode-generator/2.0.4/qrcode.mjs"
+    }
+  ]
+}
