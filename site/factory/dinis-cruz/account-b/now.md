@@ -41,3 +41,6 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 ## Round 13 (2026-11-24T23:03Z)
 - design.b.rounds round 13 (7aef897): holds at 3, M3. Fault: question box 549 px on a 390 px phone. Fixed (358 px, no sideways scroll in five designs, light and dark). First screens made each design's own (cover, dash, windscreen, road). Added site/factory/index.json.
 - Still to do: round 12 fixes, other pages in the new looks, passkey vault.
+
+## Check-back on 1fecc1e (2026-11-24T23:06Z)
+- design.b.rounds (9701360): no sideways scroll, axe clean, factory index answers. Holds at 3. Plates now in each idea's frame. Still shared across designs: heading, intro, draft notice, and the Next card. Next ask: the idea into the Next card and heading, Road atlas furthest. Round 14 when the other pages are rebuilt.
