@@ -35,3 +35,4 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 
 ## Notes
 - The Factory repository was not readable from this session at start, so the area layout follows the guidance text, not a copy of a.factory's files.
+
