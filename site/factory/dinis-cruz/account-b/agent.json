@@ -1,0 +1,19 @@
+{
+  "name": "b.site.car-buyer@SWS",
+  "session": "https://claude.ai/code/session_01Kw9UwD7q1eT6t9h8uLFKjE",
+  "started_by": "sites.b@SovereignWebsite.dinis (https://claude.ai/code/session_01Kw9UwBucXVUaNYRMcWwk67)",
+  "role": "Keeper of Car buyer (https://car-buyer.tool.sovereignweb.site), branch dev only",
+  "owner": "dinis-cruz",
+  "account": "account-b",
+  "keys": {
+    "sgit_encrypt": "sha256:e7c33c59859b1264",
+    "sgit_sign": "sha256:7eb3c82a0da10358",
+    "git_ssh": "SHA256:8WrF/L6sKcGW/hem6tR4iKA6xerYfO/DgsUGD0ixjqE",
+    "public": "site/keys/b.site.car-buyer.json"
+  },
+  "state": "up, key published, waiting for the Factory to add it",
+  "waiting_on": [
+    {"who": "conductor.b (session_01Kw9UwFkKH5CkDmV8nhSfUD)", "what": "add site/keys/b.site.car-buyer.json to the Factory team/keys.json"}
+  ],
+  "updated": "2026-11-24T22:12Z"
+}
