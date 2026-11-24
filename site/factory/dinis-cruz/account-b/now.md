@@ -14,7 +14,7 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 - Vault panel on /mycar/ has Documents: add a picture or PDF (encrypted in the browser into /documents), list, open here, read text only with the browser's own detector. Untested against the live vault (no token) and untested on Apple devices.
 - The photo Dinis sent shows a named private person's address and a document reference number: it is NOT in this repository and must not be. Tests use synthetic data only.
 - Still to do: passkey-made vault (copy the CRM's step).
-- BLOCKED: the pipeline refuses my commits (signer check, see the last report); nothing since cb182e1 is live until Dinis picks an option.
+- Signer block cleared: Dinis said yes to replacing the key with an owner override (24 Nov). Next push should deploy; check the run.
 
 ## Asked by Dinis, not yet done
 - More creative designs: the rest of the pages (brief received).

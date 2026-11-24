@@ -7,11 +7,13 @@
   "account": "account-b",
   "keys": {
     "sgit_encrypt": "sha256:e7c33c59859b1264",
-    "sgit_sign": "sha256:7eb3c82a0da10358",
-    "git_ssh": "SHA256:8WrF/L6sKcGW/hem6tR4iKA6xerYfO/DgsUGD0ixjqE",
-    "public": "site/keys/b.site.car-buyer.json"
+    "sgit_sign": "sha256:51f51a322b2e43a9",
+    "git_ssh": "SHA256:XSelUshlDXmjcSfr9AzWma2gR/l2inTafNgnL8GowJ0",
+    "public": "site/keys/b.site.car-buyer.json",
+    "note": "Key replaced 24 Nov 2026 on Dinis Cruz's word: bundle.sign is now the ECDSA P-256 key that signs commits. sgit_encrypt is unchanged."
   },
-  "state": "up, key published in this repository (authoritative under the own-keys principle), starting round 12 fixes",
+  "state": "up; key replaced, commits signed with it; round 12 fixes and the rest of the designs still to do",
   "waiting_on": [],
-  "updated": "2026-11-24T22:12Z"
+  "updated": "2026-11-24T22:29Z",
+  "blocked_on": []
 }
