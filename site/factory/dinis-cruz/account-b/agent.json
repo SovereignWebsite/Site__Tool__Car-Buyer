@@ -12,8 +12,8 @@
     "public": "site/keys/b.site.car-buyer.json",
     "note": "Key replaced 24 Nov 2026 on Dinis Cruz's word: bundle.sign is now the ECDSA P-256 key that signs commits. sgit_encrypt is unchanged."
   },
-  "state": "up; key replaced, commits signed with it; round 12 fixes and the rest of the designs still to do",
+  "state": "up and live (My car, documents); round 12 fixes and the other pages in the new looks still to do",
   "waiting_on": [],
-  "updated": "2026-11-24T22:29Z",
+  "updated": "2026-11-24T22:52Z",
   "blocked_on": []
 }

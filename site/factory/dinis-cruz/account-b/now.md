@@ -14,7 +14,8 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 - Vault panel on /mycar/ has Documents: add a picture or PDF (encrypted in the browser into /documents), list, open here, read text only with the browser's own detector. Untested against the live vault (no token) and untested on Apple devices.
 - The photo Dinis sent shows a named private person's address and a document reference number: it is NOT in this repository and must not be. Tests use synthetic data only.
 - Still to do: passkey-made vault (copy the CRM's step).
-- Signer block cleared: Dinis said yes to replacing the key with an owner override (24 Nov). Next push should deploy; check the run.
+- LIVE at 2026-11-24T22:52Z: My car, documents, /not-yet/. Signer block cleared (Dinis's owner override, 24 Nov; the key file needed bundle.sign). Lesson: run axe locally (node .github/ci/axe.mjs needs playwright and @axe-core/playwright) before every push.
+- Next: tell design.b.rounds it is live (done), round 12 fixes, other pages in the new looks, passkey vault, answers from decisions.b.
 
 ## Asked by Dinis, not yet done
 - More creative designs: the rest of the pages (brief received).
