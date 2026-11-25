@@ -2,7 +2,7 @@
 
 1. Read CLAUDE.md and README.md, then agent.json, now.md and role.md in this folder.
 2. Check git log on dev and the open items in now.md.
-3. Keys: the private halves lived only in the previous session and are not in the repository. A new session makes its own keys (sgit pki keygen --label b.site.car-buyer@SWS, plus an SSH key for git), publishes the public half in a commit of its own, replaces the fingerprints in agent.json and asks conductor.b to update the Factory's team/keys.json.
+3. Keys: the private halves lived only in the previous session and are not in the repository. A new session makes its own keys (sgit pki keygen --label b.site.car-buyer@SWS, plus an SSH key for git), publishes the public half at site/keys/<name>.json (shape: agent, session, status, bundle{encrypt,sign,...}; bundle.sign must be the key that signs commits, an ECDSA P-256 key) alone in its own commit, and replaces the fingerprints in agent.json. Do not ask conductor.b to add it to team/keys.json: the key published in this repository is authoritative (record 2026-11-24__own-keys-principle; sites.b's correction of 25 Nov). A replacement of an existing key file needs an owner override line in the commit message. Before every push run the pipeline's own checks locally, including axe.
 4. Sign every commit; trailers Agent: and Claude-Session:. Push to dev only.
 5. Update agent.json and now.md in the same commit as your status.
 
