@@ -47,3 +47,9 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 
 ## Naming model (2026-11-25T17:21Z)
 - sites.b, passing on conductor.b (25 Nov 17:21 UTC): Dinis agreed a new naming model (Site__Agent__Maestro, site/factory/dinis-cruz/account-a/notes/2026-11-25-naming-model.md). It is incremental. Do NOT rename this agent, its key file (site/keys/b.site.car-buyer.json) or its trailers (Agent: b.site.car-buyer@SWS) until my step is announced.
+
+## Lessons from the Lee-Elle keeper (2026-11-25T18:48Z)
+Source: Site__Artist__Lee-Elle-Horowitz, site/factory/dinis-cruz/account-b/learnings.md (Dinis's feedback, 25 Nov), passed on by maestro.b. What fits Car buyer:
+- Done: 13, phone-width axe in light and dark in all five designs, plus a sideways-scroll check: bash tools/checks/axe-phone.sh (140 page views, 0 problems). Run it before every push, with tools/check.sh.
+- To do, in order of value: 1 (content in JSON: the My car steps are in mycar.js, the pages' words are in the HTML); 6 and 7 (one "Choose a design" button with real screenshots, one-line top bar: today a select at the foot and /designs/); 5 (wow, owner's photo on the first screen: needs Dinis's choice of real photos); 8 (admin area like Kate's: /admin/ is the seeded page); 9 to 11 (a guided-tour presentation with a PDF, named for sharing).
+- Not for this site: 2 and 3 (translations, language switch) until Dinis names a second language. 4 (stand-in photos) waits on the same photo decision.
