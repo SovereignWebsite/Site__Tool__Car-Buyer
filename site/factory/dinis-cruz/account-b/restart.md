@@ -7,3 +7,5 @@
 5. Update agent.json and now.md in the same commit as your status.
 
 Contacts: sites.b (session_01Kw9UwBucXVUaNYRMcWwk67), conductor.b (session_01Kw9UwFkKH5CkDmV8nhSfUD), design.b (session_01Kw9UwCvZbGkWo3D9DEpRMv), design.b.rounds (session_01Kw9UwFCJTPWFaTq4TX5vUT), hub.b (session_01Kw9UwB7XboTsnbPPWaMr2d), decisions.b (session_01Kw9UwEVSYcMDgNqrPVfCtZ).
+
+Naming: keep the name b.site.car-buyer@SWS, the key file name and the Agent: trailer as they are until sites.b announces this agent's step of the naming model (25 Nov 2026).

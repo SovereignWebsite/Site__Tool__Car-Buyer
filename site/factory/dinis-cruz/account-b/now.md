@@ -44,3 +44,6 @@ Area is up. Key published here (b0bff1e). conductor.b (22:13 UTC): it cannot add
 
 ## Check-back on 1fecc1e (2026-11-24T23:06Z)
 - design.b.rounds (9701360): no sideways scroll, axe clean, factory index answers. Holds at 3. Plates now in each idea's frame. Still shared across designs: heading, intro, draft notice, and the Next card. Next ask: the idea into the Next card and heading, Road atlas furthest. Round 14 when the other pages are rebuilt.
+
+## Naming model (2026-11-25T17:21Z)
+- sites.b, passing on conductor.b (25 Nov 17:21 UTC): Dinis agreed a new naming model (Site__Agent__Maestro, site/factory/dinis-cruz/account-a/notes/2026-11-25-naming-model.md). It is incremental. Do NOT rename this agent, its key file (site/keys/b.site.car-buyer.json) or its trailers (Agent: b.site.car-buyer@SWS) until my step is announced.
