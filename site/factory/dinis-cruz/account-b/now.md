@@ -53,3 +53,10 @@ Source: Site__Artist__Lee-Elle-Horowitz, site/factory/dinis-cruz/account-b/learn
 - Done: 13, phone-width axe in light and dark in all five designs, plus a sideways-scroll check: bash tools/checks/axe-phone.sh (140 page views, 0 problems). Run it before every push, with tools/check.sh.
 - To do, in order of value: 1 (content in JSON: the My car steps are in mycar.js, the pages' words are in the HTML); 6 and 7 (one "Choose a design" button with real screenshots, one-line top bar: today a select at the foot and /designs/); 5 (wow, owner's photo on the first screen: needs Dinis's choice of real photos); 8 (admin area like Kate's: /admin/ is the seeded page); 9 to 11 (a guided-tour presentation with a PDF, named for sharing).
 - Not for this site: 2 and 3 (translations, language switch) until Dinis names a second language. 4 (stand-in photos) waits on the same photo decision.
+
+## Insurance section (2026-11-26T15:35Z)
+- Asked by Dinis, relayed by maestro.b (26 Nov 15:30 UTC): research UK car insurance from public sources only, each fact with source and date read; build an Insurance section; no affiliate links, no best-deal claim.
+- Built: /insurance/ from site/data/insurance.json by node tools/build-insurance.mjs (edit the JSON, never the HTML; the generator refuses a fact without a source and a source nobody cites). 8 sections, 14 sources, all read 26 Nov 2026.
+- Found: insurers set prices, comparison sites earn commission (CMA 2014); ENBP renewal rule since 1 Jan 2022 (FCA PS21/5); no public UK motor quote API found; broker and aggregator APIs exist by private agreement (two trade-press items); MoneySuperMarket's terms (amended 13 Jul 2026) forbid automated access.
+- Could not read: the other big comparison sites' terms, the Aviva developer portal. Not assessed: whether an agent arranging insurance needs FCA authorisation.
+- Next: send maestro.b the live link and a note; design.b.rounds review; security.b via decisions.b.

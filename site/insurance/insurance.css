@@ -1,0 +1,9 @@
+.facts{list-style:none;padding:0;margin:1rem 0}.facts li{border-left:3px solid var(--accent);padding:.3rem 0 .3rem .8rem;margin:.7rem 0;color:var(--fg)}
+.fnote{display:block;font-size:.88rem;color:var(--muted);margin-top:.2rem}
+.cite a{text-decoration:none;font-weight:600;padding:0 .1rem}
+.toc{display:flex;flex-wrap:wrap;gap:.3rem 1rem;margin:1rem 0}.toc a{font-weight:600}
+.srclist li{margin:.5rem 0;overflow-wrap:anywhere}
+.small{font-size:.88rem}
+details.sec{border-top:1px solid var(--line);padding:.2rem 0}details.sec>summary{cursor:pointer;list-style:none}details.sec>summary::-webkit-details-marker{display:none}
+details.sec>summary h2{display:inline;font-size:1.25rem;margin:0}details.sec>summary::before{content:"\25B8  ";color:var(--accent)}details.sec[open]>summary::before{content:"\25BE  "}
+details.sec>summary{padding:.6rem 0;min-height:44px}

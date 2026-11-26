@@ -45,7 +45,7 @@
 </details>
 <header class="top">
   <a class="name" href="/">Car buyer</a>
-  <nav class="own" aria-label="This site"><a href="/check/">Check</a><a href="/mycar/">My car</a><a href="/checklist/">Checklist</a><a href="/plate/">Plates</a><a href="/costs/">Costs</a><a href="/sources/">Sources</a><a class="navdesigns" href="/designs/">Designs</a></nav>
+  <nav class="own" aria-label="This site"><a href="/check/">Check</a><a href="/mycar/">My car</a><a href="/insurance/">Insurance</a><a href="/checklist/">Checklist</a><a href="/plate/">Plates</a><a href="/costs/">Costs</a><a href="/sources/">Sources</a><a class="navdesigns" href="/designs/">Designs</a></nav>
 </header>
 <main id="main">
 <div class="mark">Open list</div>
@@ -57,6 +57,7 @@
 <tr><td>Create and save to a vault, tested end to end</td><td>The code is the CRM's pinned library. We have not yet run it against the live vault service from here.</td><td>Owner tries it with a real token; we write what happens.</td></tr>
 <tr><td>Read a document (a V5C photo) with Apple Intelligence</td><td>No web interface for it that we know of. Where the browser has its own text detector the page uses it; on Safari, Live Text on the picture is Apple's own feature and works on your device. We have not tested either on a real V5C: the keeper has no Apple device.</td><td>The owner tries Live Text on a photo opened in My car and tells us what it read.</td></tr>
 <tr><td>Make the vault from a passkey</td><td>The CRM does it with a passkey held on the device. Car buyer makes the key in the browser only so far, so clearing the browser's data loses it unless the vault key is saved elsewhere.</td><td>Copy the CRM's passkey step, then test it on a real device.</td></tr>
+<tr><td>Get a UK car insurance quote from a public API, or by an agent on its own</td><td>We found no public, open quote API, and the one comparison site whose terms we could read forbids automated access. How the large comparison sites connect to insurers is not publicly described that we could find. Sources and dates are on <a href="/insurance/">the Insurance page</a>.</td><td>A keyed partner arrangement with a broker or insurer, if the owner wants one. Check the other comparison sites' terms.</td></tr>
 <tr><td>Look up a plate from the page</td><td>The DVLA and MOT services refuse requests from a browser page and need a key held on a server.</td><td>Waits for a keyed service.</td></tr>
 </tbody></table>
 <footer>

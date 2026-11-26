@@ -1,0 +1,348 @@
+{
+  "title": "Insurance, Car buyer",
+  "heading": "Car insurance: how it is sold, and how to find it",
+  "description": "How UK car insurance is priced and sold, where comparison-site quotes come from, what a buyer should know, which public data and APIs exist, and what an agent can honestly do today to find you a quote. Every fact has its source and the date we read it.",
+  "read_on": "26 November 2026",
+  "lede": "You can drive a car you have just bought only once it is insured. This page explains how the market works, what to know before you buy cover, which data and APIs are public, and what an AI agent can and cannot do for you today. Public sources only. No affiliate links. No claim of a best deal.",
+  "draft": "Draft: new section, researched on 26 November 2026, not yet reviewed by design or security, and not looked at by the site's owner. Not financial advice. Prices and rules change; check each source before you rely on it.",
+  "sources": {
+    "s1": {
+      "title": "CMA, press release: CMA finalises changes for car insurance",
+      "url": "https://www.gov.uk/government/news/cma-finalises-changes-for-car-insurance",
+      "source_date": "24 September 2014",
+      "read": "26 November 2026"
+    },
+    "s2": {
+      "title": "CMA, Private motor insurance market investigation: final report",
+      "url": "https://assets.publishing.service.gov.uk/media/5421c2ade5274a1314000001/Final_report.pdf",
+      "source_date": "24 September 2014",
+      "read": "26 November 2026"
+    },
+    "s3": {
+      "title": "FCA, PS21/5: General insurance pricing practices market study, feedback to CP20/19 and final rules",
+      "url": "https://www.fca.org.uk/publication/policy/ps21-5.pdf",
+      "source_date": "May 2021",
+      "read": "26 November 2026"
+    },
+    "s4": {
+      "title": "FCA, Transparency at insurance renewals",
+      "url": "https://www.fca.org.uk/firms/transparency-insurance-renewals",
+      "source_date": "not shown on the page",
+      "read": "26 November 2026"
+    },
+    "s5": {
+      "title": "GOV.UK, Vehicle insurance",
+      "url": "https://www.gov.uk/vehicle-insurance",
+      "source_date": "current page",
+      "read": "26 November 2026"
+    },
+    "s6": {
+      "title": "GOV.UK, Driving without insurance",
+      "url": "https://www.gov.uk/vehicle-insurance/driving-without-insurance",
+      "source_date": "current page",
+      "read": "26 November 2026"
+    },
+    "s7": {
+      "title": "GOV.UK, Uninsured vehicles",
+      "url": "https://www.gov.uk/vehicle-insurance/uninsured-vehicles",
+      "source_date": "current page",
+      "read": "26 November 2026"
+    },
+    "s8": {
+      "title": "MIB, Check your vehicle insurance status",
+      "url": "https://www.mib.org.uk/check-and-stay-insured/check-your-vehicle/",
+      "source_date": "current page",
+      "read": "26 November 2026"
+    },
+    "s9": {
+      "title": "GOV.UK, View or share your driving licence information",
+      "url": "https://www.gov.uk/view-driving-licence",
+      "source_date": "current page",
+      "read": "26 November 2026"
+    },
+    "s10": {
+      "title": "DVLA, Vehicle Enquiry Service (VES) API guide",
+      "url": "https://developer-portal.driver-vehicle-licensing.api.gov.uk/apis/vehicle-enquiry-service/vehicle-enquiry-service-description.html",
+      "source_date": "current page",
+      "read": "26 November 2026"
+    },
+    "s11": {
+      "title": "MoneySuperMarket, Terms and Conditions",
+      "url": "https://www.moneysupermarket.com/legal/terms",
+      "source_date": "last amended 13 July 2026, as the page states",
+      "read": "26 November 2026"
+    },
+    "s12": {
+      "title": "Insurance Age, Aventus launches Aggregator API",
+      "url": "https://www.insuranceage.co.uk/technology/7538716/aventus-launches-aggregator-api",
+      "source_date": "18 January 2021",
+      "read": "26 November 2026 (only the opening of the article is free to read)"
+    },
+    "s13": {
+      "title": "Insurance Age, ERS and Acturis team up on full-cycle API car product for brokers",
+      "url": "https://www.insuranceage.co.uk/insight/7953108/ers-and-acturis-team-up-on-full-cycle-api-car-product-for-brokers",
+      "source_date": "2 June 2023",
+      "read": "26 November 2026 (only the opening of the article is free to read)"
+    },
+    "s14": {
+      "title": "Aviva developer portal, insurance",
+      "url": "https://developer.aviva.co.uk/insurance",
+      "source_date": "not read",
+      "read": "26 November 2026 (the page did not load for us)"
+    }
+  },
+  "sections": [
+    {
+      "id": "short",
+      "heading": "The short answer",
+      "label": "Our reading",
+      "paras": [
+        "Car insurance is sold three ways: direct from the insurer, through a broker, and through price comparison websites. The insurers set the prices; the comparison sites are paid a commission for the policies they sell.",
+        "No public, open API gives you an insurance quote for a car in the UK. We looked and did not find one. Quotes reach the comparison sites through technical links that insurers and brokers agree privately with each site.",
+        "An agent can today gather the facts a quote needs from official services and from you, and hand you a ready checklist. It cannot, on the evidence we found, fetch binding quotes from the big comparison sites on its own, and the one site whose terms we could read forbids automated access.",
+        "We name no best deal. Nobody neutral publishes one, and a quote depends on the person, the car and the day."
+      ],
+      "open": true
+    },
+    {
+      "id": "sold",
+      "heading": "How car insurance is sold",
+      "facts": [
+        {
+          "text": "In its 2014 final report the CMA described price comparison websites (PCWs) as a two-sided market that matches people searching for car insurance with insurers looking for customers, and found that between 55 and 65 per cent of new private motor insurance business came through PCWs at that time.",
+          "src": [
+            "s2"
+          ],
+          "note": "A 2014 figure. The market has moved since; we found no newer figure on a page we could read."
+        },
+        {
+          "text": "The same report says PCWs earn a commission fee on the policies sold through their service, but the insurers set the premiums at which their policies are made available.",
+          "src": [
+            "s2"
+          ]
+        },
+        {
+          "text": "The report named four large PCWs at that time: Comparethemarket.com, Confused.com, GoCompare.com and Moneysupermarket.com, and noted that three of the four were wholly or partly owned by insurers or brokers.",
+          "src": [
+            "s2"
+          ],
+          "note": "Ownership as at 2014. Check who owns each site today."
+        },
+        {
+          "text": "Some big insurance brands sold mostly direct and were often not listed on PCWs at all, for example the Direct Line brand, according to the same report.",
+          "src": [
+            "s2"
+          ],
+          "note": "A 2014 statement. Check each insurer's current position."
+        }
+      ],
+      "open": false
+    },
+    {
+      "id": "quotes",
+      "heading": "Where a comparison site's quotes come from",
+      "paras": [
+        "You type your details once. The site passes them to each insurer or broker it works with, and each returns a price, so the price on screen comes from the insurer's own pricing, not from the comparison site. That much follows from the CMA's finding that insurers set the premiums.",
+        "How the data travels is technical and mostly private. The public detail we found is in two trade-press items about brokers, and both describe connections by agreement, not open interfaces."
+      ],
+      "facts": [
+        {
+          "text": "A software firm, Aventus, launched an API (a way for computer systems to talk to each other) that lets brokers manage their accounts with comparison sites and distribute their products on them. The article says it connected to four comparison sites including Confused, MoneySuperMarket and Quotezone.",
+          "src": [
+            "s12"
+          ],
+          "note": "January 2021, from the free opening of the article."
+        },
+        {
+          "text": "Another software firm, Acturis, and an insurer, ERS, launched an API-based car insurance product for brokers that gives real-time pricing for new business, mid-term changes and renewals, replacing older EDI messaging.",
+          "src": [
+            "s13"
+          ],
+          "note": "June 2023, from the free opening of the article."
+        }
+      ],
+      "notfound": "We did not find a public description of the exact technical interface between the four large comparison sites and the insurers. That is a gap, not evidence that no such interface exists.",
+      "open": false
+    },
+    {
+      "id": "rules",
+      "heading": "Rules that protect a buyer",
+      "facts": [
+        {
+          "text": "In 2014 the CMA banned agreements between comparison sites and insurers that stopped insurers offering their products more cheaply on other online platforms, because they restricted competition and led to higher premiums overall.",
+          "src": [
+            "s1"
+          ]
+        },
+        {
+          "text": "Since 1 January 2022 the FCA's rules say a renewal price must be no greater than the equivalent new business price (ENBP) the firm would offer a new customer. The rules treat each intermediary chain or price comparison website as a separate channel, so the comparison is made within the channel you first bought through.",
+          "src": [
+            "s3"
+          ],
+          "note": "The final rules are in ICOBS 6B of the FCA Handbook; read the policy statement for the exact wording."
+        },
+        {
+          "text": "At each renewal, firms must show last year's premium and encourage you to check your cover and shop around. If you have renewed four or more times in a row they must add a further message encouraging you to shop around.",
+          "src": [
+            "s4"
+          ]
+        }
+      ],
+      "paras": [
+        "Our reading: the rules stop a firm charging you more at renewal than a new customer in the same channel, but they do not promise the cheapest price in the market. Comparing at each renewal is still the way to find it."
+      ],
+      "open": false
+    },
+    {
+      "id": "buyer",
+      "heading": "What a buyer should know",
+      "facts": [
+        {
+          "text": "You must have motor insurance to drive on UK roads. Third party insurance is the legal minimum. It covers damage or injury to other people, vehicles, animals and property, and does not cover repairs to your own vehicle.",
+          "src": [
+            "s5"
+          ]
+        },
+        {
+          "text": "If you are caught driving a vehicle you are not insured to drive, the police can give a fixed penalty of 300 pounds and 6 penalty points. A court can impose an unlimited fine and disqualification, and the police can seize and in some cases destroy the vehicle.",
+          "src": [
+            "s6"
+          ]
+        },
+        {
+          "text": "The registered keeper of an uninsured vehicle that has not been declared off the road (SORN) can be fined 100 pounds, have the vehicle clamped, impounded or destroyed, or be taken to court for a fine of up to 1,000 pounds. GOV.UK points to askMID for checking.",
+          "src": [
+            "s7"
+          ]
+        },
+        {
+          "text": "The MIB's Check Your Vehicle tool uses Navigate, the central record of insured vehicles in the UK, and answers only insured or not insured. An answer of insured means a live policy exists, not that it is the right policy, for example for how you use the car. The service may be used only for vehicles you own or have the legal right to drive.",
+          "src": [
+            "s8"
+          ],
+          "note": "GOV.UK still calls this service askMID; the MIB page calls it Check Your Vehicle, using Navigate."
+        },
+        {
+          "text": "You can create a driving licence check code to share your driving record with someone, for example a car hire company. The code is valid for 21 days. You need your licence number, your National Insurance number and the postcode on your licence.",
+          "src": [
+            "s9"
+          ],
+          "note": "The page does not say insurers use this code; do not assume they do."
+        }
+      ],
+      "paras": [
+        "Our reading, from the sources above: insure the car before you drive it away, make sure the policy covers the use you intend, and keep the policy documents with the V5C. Our My car page has the other steps."
+      ],
+      "open": false
+    },
+    {
+      "id": "apis",
+      "heading": "Which APIs and data are public",
+      "table": {
+        "head": [
+          "What",
+          "Who can use it",
+          "What it gives",
+          "Source"
+        ],
+        "rows": [
+          [
+            "DVLA Vehicle Enquiry Service (VES) API",
+            "Anyone who applies and is issued a key; every request carries the key",
+            "Vehicle details for a registration number, including tax status and MOT status, make and colour. The documented response has no insurance field.",
+            [
+              "s10"
+            ]
+          ],
+          [
+            "MIB Check Your Vehicle",
+            "A person, on a web page, for a vehicle they own or may legally drive",
+            "Insured or not insured. We found no public API for it.",
+            [
+              "s8"
+            ]
+          ],
+          [
+            "DVLA licence check code",
+            "The licence holder, through a GOV.UK service",
+            "A 21-day code to share a driving record with someone the holder chooses",
+            [
+              "s9"
+            ]
+          ],
+          [
+            "Broker and aggregator APIs",
+            "Brokers and software firms, by commercial agreement",
+            "Quotes and account management between brokers, insurers and comparison sites",
+            [
+              "s12",
+              "s13"
+            ]
+          ],
+          [
+            "Aviva developer portal",
+            "We could not read it",
+            "We make no claim about what it exposes",
+            [
+              "s14"
+            ]
+          ]
+        ]
+      },
+      "notfound": "We did not find a public, open API that returns a UK car insurance quote, nor an open insurance data standard for UK motor. This is what we found in a search on 26 November 2026, not proof that none exists.",
+      "open": false
+    },
+    {
+      "id": "agent",
+      "heading": "Can an agent find insurance for you?",
+      "label": "Our reading",
+      "paras": [
+        "What an agent can honestly do today:"
+      ],
+      "list": [
+        "Gather the facts a quote asks for from your own documents and from official services: make, tax and MOT status from the DVLA service, and your licence details, which you share yourself.",
+        "Prepare a checklist of what to ask: cover level, excess, use, named drivers, where the car is kept, and what happens at renewal.",
+        "Open the comparison sites for you, with no affiliate links, so that you enter or confirm the details yourself.",
+        "Remind you to compare again at each renewal."
+      ],
+      "paras_after": [
+        "What it cannot do, on the evidence we found:"
+      ],
+      "list_after": [
+        "Fetch quotes automatically from a comparison site. MoneySuperMarket's terms, last amended 13 July 2026, forbid any robot, bot, spider, scraper or other automated tool from accessing or copying the site or its data, and limit use to a person seeking a product for themselves. We could not read the other large sites' terms, so check them before pointing an agent at them.",
+        "Obtain a binding quote from an insurer without a commercial arrangement. We found no public quote API.",
+        "Say which deal is best. No neutral source we found ranks them, and the answer changes with the person and the day.",
+        "Check the insurance on a car you are only thinking of buying. The MIB tool is for vehicles you own or may legally drive."
+      ],
+      "paras_end": [
+        "Not assessed: whether an agent that arranges or sells insurance for you needs FCA authorisation. We have not looked at the FCA's rules on this. Ask the FCA before building or using an agent that does more than gather facts."
+      ],
+      "facts": [
+        {
+          "text": "MoneySuperMarket's terms say the site and app are for personal use only, and prohibit using any robot, bot, spider, scraper or other automated device, program, tool, algorithm, code, process or methodology to access, obtain, copy, monitor or republish any part of the site or its data. The terms were last amended on 13 July 2026.",
+          "src": [
+            "s11"
+          ],
+          "note": "One site's terms. They are the only comparison-site terms we could read."
+        }
+      ],
+      "open": true
+    },
+    {
+      "id": "open",
+      "heading": "What we could not find or check",
+      "list": [
+        "Current market shares and ownership of the comparison sites. The figures above are from 2014.",
+        "How the large comparison sites connect to insurers, in technical terms.",
+        "The terms of the other large comparison sites on automated use. Their pages did not load for us.",
+        "What the Aviva developer portal exposes. The page did not load for us.",
+        "Whether any insurer offers a public quote API for UK cars.",
+        "Whether an agent arranging insurance needs FCA authorisation."
+      ],
+      "paras": [
+        "If you know a public source for any of these, tell us and we will add it with its date. This list is also kept on the page of things we cannot do yet."
+      ],
+      "open": false
+    }
+  ]
+}

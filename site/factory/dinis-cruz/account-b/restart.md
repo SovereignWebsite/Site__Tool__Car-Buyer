@@ -11,3 +11,5 @@ Contacts: sites.b (session_01Kw9UwBucXVUaNYRMcWwk67), conductor.b (session_01Kw9
 Naming: keep the name b.site.car-buyer@SWS, the key file name and the Agent: trailer as they are until sites.b announces this agent's step of the naming model (25 Nov 2026).
 
 Before every push: bash tools/check.sh, and bash tools/checks/axe-phone.sh (390 px, light and dark, five designs, no sideways scroll).
+
+Insurance page: edit site/data/insurance.json, then node tools/build-insurance.mjs (it writes site/insurance/index.html). Every fact needs a source and a read date.
