@@ -60,3 +60,7 @@ Source: Site__Artist__Lee-Elle-Horowitz, site/factory/dinis-cruz/account-b/learn
 - Found: insurers set prices, comparison sites earn commission (CMA 2014); ENBP renewal rule since 1 Jan 2022 (FCA PS21/5); no public UK motor quote API found; broker and aggregator APIs exist by private agreement (two trade-press items); MoneySuperMarket's terms (amended 13 Jul 2026) forbid automated access.
 - Could not read: the other big comparison sites' terms, the Aviva developer portal. Not assessed: whether an agent arranging insurance needs FCA authorisation.
 - Next: send maestro.b the live link and a note; design.b.rounds review; security.b via decisions.b.
+
+## Routing (2026-11-26T15:37Z)
+- maestro.b (26 Nov 15:39 UTC): b.security is session_01Kw9UwBQqeQAymiagw8BjRY and has been asked to review the Insurance section. Source for this work: dinis.2026-11-26T1525Z.b; maestro.b records 16d821c against it.
+- Waiting on: design.b.rounds (review of /insurance/), b.security (review of /insurance/ and the vault panel), decisions.b (four questions in the My car request).
