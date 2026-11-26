@@ -70,3 +70,7 @@ Source: Site__Artist__Lee-Elle-Horowitz, site/factory/dinis-cruz/account-b/learn
 - Scoped exceptions to b.security's policy, to be removed: style-src 'unsafe-inline' on the home page, checklist, costs (inline style attributes) and admin, agents, start (a seeded style block); /mycar/ also connects to https://dev.send.sgraph.ai and shows blob: images. site/policy/ untouched (README: agents do not edit it), so it has no CSP.
 - Tested in Chromium: 15 pages in five designs, 0 violations; negative control blocks a remote fetch, remote image, inline script and inline style attribute on the strict pages; /mycar/ allows only the vault host and blob images.
 - To remove the exceptions: move the inline styles into files (lesson 1 and 7 of the Lee-Elle lessons point the same way).
+
+## Security closed (2026-11-26T15:44Z)
+- maestro.b (26 Nov 15:46 UTC): b.security checked f8b1cc7 live. All three CSP exceptions accepted (move the inline styles into files when convenient; site/policy/ noted for the seed's owner). Insurance section: PASS, closed.
+- Still open: design.b.rounds review of /insurance/; decisions.b on the My car request (four questions); round 12 fixes; the other pages in the new looks; passkey vault; removing the style exceptions.
