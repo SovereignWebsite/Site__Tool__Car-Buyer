@@ -242,3 +242,17 @@ html{accent-color:var(--accent)}
 .bigmap svg.map-tall{display:none}
 @media (max-width:600px){.bigmap svg.map-wide{display:none}.bigmap svg.map-tall{display:block}}
 @media (max-width:40rem){[data-design="3"] .stage .tick li::after{font-size:1rem}}
+/* Design chooser panel (assets/design.js): one button in the top bar, a dialog of five real screenshots */
+.design-btn{font-size:.95rem;padding:.3rem .8rem;white-space:nowrap}
+.design-dialog{max-width:min(46rem,94vw);width:100%;padding:1rem 1.2rem;border:2px solid var(--line);border-radius:12px;background:var(--bg);color:var(--fg)}
+.design-dialog::backdrop{background:rgba(0,0,0,.55)}
+.design-dialog h2{margin:.2rem 0 .3rem}
+.design-grid{list-style:none;margin:.8rem 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:.7rem}
+.design-grid li{margin:0}
+.design-opt{display:block;width:100%;text-align:left;font-weight:400;background:transparent;color:var(--fg);border:2px solid var(--line);border-radius:10px;padding:.4rem;cursor:pointer}
+.design-opt img{display:block;width:100%;height:auto;border-radius:6px;margin-bottom:.3rem}
+.design-opt strong{display:block;color:var(--fg)}.design-opt .small{display:block;color:var(--muted)}
+.design-opt[aria-current="true"]{outline:4px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.design-opt:hover,.design-opt:focus-visible{border-color:var(--accent)}
+.design-foot{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 1rem;margin:.4rem 0 0}
+.top .design-btn{margin-left:.2rem}
