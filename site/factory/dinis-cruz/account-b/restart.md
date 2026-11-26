@@ -15,3 +15,5 @@ Before every push: bash tools/check.sh, and bash tools/checks/axe-phone.sh (390 
 Insurance page: edit site/data/insurance.json, then node tools/build-insurance.mjs (it writes site/insurance/index.html). Every fact needs a source and a read date.
 
 b.security: session_01Kw9UwBQqeQAymiagw8BjRY (reviews the vault panel and the Insurance section).
+
+After adding a page run node tools/apply-csp.mjs (site-wide Content-Security-Policy meta; see its header for the three scoped exceptions).

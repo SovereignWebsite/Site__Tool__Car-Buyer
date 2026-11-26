@@ -2,6 +2,7 @@
 // Refuses a fact without a source, a source without a "read" date, an em dash, or a source that no fact cites.
 //   node tools/build-insurance.mjs
 import { readFileSync, writeFileSync } from 'node:fs';
+import { withCsp } from './apply-csp.mjs';
 const D = JSON.parse(readFileSync('site/data/insurance.json', 'utf8'));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const errs = [], cited = new Set();
@@ -43,5 +44,5 @@ ${foot}</main>
 `;
 if (page.includes('—')) errs.push('an em dash in the output');
 if (errs.length) { console.error(errs.join('\n')); process.exit(1); }
-writeFileSync('site/insurance/index.html', page);
+writeFileSync('site/insurance/index.html', withCsp(page, 'insurance/index.html'));
 console.log(`insurance page built: ${D.sections.length} sections, ${cited.size} sources cited`);

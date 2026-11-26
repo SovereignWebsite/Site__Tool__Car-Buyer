@@ -4,7 +4,7 @@
   "description": "How UK car insurance is priced and sold, where comparison-site quotes come from, what a buyer should know, which public data and APIs exist, and what an agent can honestly do today to find you a quote. Every fact has its source and the date we read it.",
   "read_on": "26 November 2026",
   "lede": "You can drive a car you have just bought only once it is insured. This page explains how the market works, what to know before you buy cover, which data and APIs are public, and what an AI agent can and cannot do for you today. Public sources only. No affiliate links. No claim of a best deal.",
-  "draft": "Draft: new section, researched on 26 November 2026, not yet reviewed by design or security, and not looked at by the site's owner. Not financial advice. Prices and rules change; check each source before you rely on it.",
+  "draft": "Reviewed: security checked this section on 26 November 2026 and asked for two changes, now made. Design review is still to come, and the site's owner has not yet looked. Not financial advice. Prices and rules change; check each source before you rely on it.",
   "sources": {
     "s1": {
       "title": "CMA, press release: CMA finalises changes for car insurance",
@@ -300,7 +300,7 @@
         "What an agent can honestly do today:"
       ],
       "list": [
-        "Gather the facts a quote asks for from your own documents and from official services: make, tax and MOT status from the DVLA service, and your licence details, which you share yourself.",
+        "Gather the facts a quote asks for from your own documents and from official services: make, tax and MOT status from the DVLA service, and your licence details, which you share yourself. These are personal data. The agent does not keep or publish them.",
         "Prepare a checklist of what to ask: cover level, excess, use, named drivers, where the car is kept, and what happens at renewal.",
         "Open the comparison sites for you, with no affiliate links, so that you enter or confirm the details yourself.",
         "Remind you to compare again at each renewal."

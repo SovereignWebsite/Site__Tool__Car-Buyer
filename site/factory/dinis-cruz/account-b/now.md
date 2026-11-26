@@ -64,3 +64,9 @@ Source: Site__Artist__Lee-Elle-Horowitz, site/factory/dinis-cruz/account-b/learn
 ## Routing (2026-11-26T15:37Z)
 - maestro.b (26 Nov 15:39 UTC): b.security is session_01Kw9UwBQqeQAymiagw8BjRY and has been asked to review the Insurance section. Source for this work: dinis.2026-11-26T1525Z.b; maestro.b records 16d821c against it.
 - Waiting on: design.b.rounds (review of /insurance/), b.security (review of /insurance/ and the vault panel), decisions.b (four questions in the My car request).
+
+## b.security changes on the Insurance section (2026-11-26T15:42Z)
+- Done: site-wide meta Content-Security-Policy (tools/apply-csp.mjs; build-insurance.mjs applies it too) and the personal-data line in the agent section; the draft line now says security checked on 26 Nov.
+- Scoped exceptions to b.security's policy, to be removed: style-src 'unsafe-inline' on the home page, checklist, costs (inline style attributes) and admin, agents, start (a seeded style block); /mycar/ also connects to https://dev.send.sgraph.ai and shows blob: images. site/policy/ untouched (README: agents do not edit it), so it has no CSP.
+- Tested in Chromium: 15 pages in five designs, 0 violations; negative control blocks a remote fetch, remote image, inline script and inline style attribute on the strict pages; /mycar/ allows only the vault host and blob images.
+- To remove the exceptions: move the inline styles into files (lesson 1 and 7 of the Lee-Elle lessons point the same way).
