@@ -74,3 +74,9 @@ Source: Site__Artist__Lee-Elle-Horowitz, site/factory/dinis-cruz/account-b/learn
 ## Security closed (2026-11-26T15:44Z)
 - maestro.b (26 Nov 15:46 UTC): b.security checked f8b1cc7 live. All three CSP exceptions accepted (move the inline styles into files when convenient; site/policy/ noted for the seed's owner). Insurance section: PASS, closed.
 - Still open: design.b.rounds review of /insurance/; decisions.b on the My car request (four questions); round 12 fixes; the other pages in the new looks; passkey vault; removing the style exceptions.
+
+## design.b.rounds review of /insurance/ (2026-11-26T15:53Z)
+Review: reviews-car-buyer-2026-11-26-insurance (16d821c, f771a1c). Clean on axe, size, 13 of 14 sources answer. 1/5 for getting the car insured this week; look 3.2; holds at 3.
+- Done: a "Do this first" block at the top, open; "What a buyer should know" open and second; agent section last and open with the limit (MoneySuperMarket's terms) first; footer date now matches the page (26 Nov); young drivers, multi-car, named drivers and no-claims discounts named as not covered, with the CMA's no-claims bonus protection finding added.
+- Found while checking dates: My car's steps cited GOV.UK pages I had not read. Read them on 26 Nov; corrected the keeper step (the seller tells DVLA and gives the green new keeper slip, which the buyer uses to tax the car) and the tax step (tax is not transferred; tax before you drive or declare SORN); removed an unsourced line about driving home. TfL's page blocked our reader, so the My car footer says so.
+- To do: the site-wide design chooser (one "Choose a design" button and a panel of screenshots, guidelines 2a of 25 Nov); young drivers etc. if wanted.

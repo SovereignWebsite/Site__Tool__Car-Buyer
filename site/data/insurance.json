@@ -93,6 +93,88 @@
   },
   "sections": [
     {
+      "id": "first",
+      "heading": "Do this first",
+      "open": true,
+      "paras": [
+        "Three things, in this order. Each rests on the sources named."
+      ],
+      "facts": [
+        {
+          "text": "Do not drive the car until it is insured. You must have motor insurance to drive on UK roads, and the police can give a fixed penalty of 300 pounds and 6 penalty points if you are caught driving a vehicle you are not insured to drive.",
+          "src": [
+            "s5",
+            "s6"
+          ]
+        },
+        {
+          "text": "Get quotes from more than one place. Some big insurance brands sell mostly direct and are often not on comparison sites at all, so a comparison site does not show the whole market.",
+          "src": [
+            "s2"
+          ],
+          "note": "A 2014 statement about the Direct Line brand. Check each insurer's current position."
+        },
+        {
+          "text": "Check what the policy covers for how you will use the car. A live policy is not necessarily the right policy.",
+          "src": [
+            "s8"
+          ]
+        }
+      ],
+      "paras_end": [
+        "After you buy, keep the policy documents with the V5C. That last point is our advice, not a sourced fact."
+      ]
+    },
+    {
+      "id": "buyer",
+      "heading": "What a buyer should know",
+      "facts": [
+        {
+          "text": "You must have motor insurance to drive on UK roads. Third party insurance is the legal minimum. It covers damage or injury to other people, vehicles, animals and property, and does not cover repairs to your own vehicle.",
+          "src": [
+            "s5"
+          ]
+        },
+        {
+          "text": "If you are caught driving a vehicle you are not insured to drive, the police can give a fixed penalty of 300 pounds and 6 penalty points. A court can impose an unlimited fine and disqualification, and the police can seize and in some cases destroy the vehicle.",
+          "src": [
+            "s6"
+          ]
+        },
+        {
+          "text": "The registered keeper of an uninsured vehicle that has not been declared off the road (SORN) can be fined 100 pounds, have the vehicle clamped, impounded or destroyed, or be taken to court for a fine of up to 1,000 pounds. GOV.UK points to askMID for checking.",
+          "src": [
+            "s7"
+          ]
+        },
+        {
+          "text": "The MIB's Check Your Vehicle tool uses Navigate, the central record of insured vehicles in the UK, and answers only insured or not insured. An answer of insured means a live policy exists, not that it is the right policy, for example for how you use the car. The service may be used only for vehicles you own or have the legal right to drive.",
+          "src": [
+            "s8"
+          ],
+          "note": "GOV.UK still calls this service askMID; the MIB page calls it Check Your Vehicle, using Navigate."
+        },
+        {
+          "text": "You can create a driving licence check code to share your driving record with someone, for example a car hire company. The code is valid for 21 days. You need your licence number, your National Insurance number and the postcode on your licence.",
+          "src": [
+            "s9"
+          ],
+          "note": "The page does not say insurers use this code; do not assume they do."
+        },
+        {
+          "text": "The CMA's 2014 measures included better information for consumers on the costs and benefits of no-claims bonus protection, an add-on sold with car insurance.",
+          "src": [
+            "s1"
+          ],
+          "note": "Read the add-on's terms before you buy it."
+        }
+      ],
+      "paras": [
+        "Our reading, from the sources above: insure the car before you drive it away, make sure the policy covers the use you intend, and keep the policy documents with the V5C. Our My car page has the other steps."
+      ],
+      "open": true
+    },
+    {
       "id": "short",
       "heading": "The short answer",
       "label": "Our reading",
@@ -102,7 +184,7 @@
         "An agent can today gather the facts a quote needs from official services and from you, and hand you a ready checklist. It cannot, on the evidence we found, fetch binding quotes from the big comparison sites on its own, and the one site whose terms we could read forbids automated access.",
         "We name no best deal. Nobody neutral publishes one, and a quote depends on the person, the car and the day."
       ],
-      "open": true
+      "open": false
     },
     {
       "id": "sold",
@@ -194,48 +276,6 @@
       "open": false
     },
     {
-      "id": "buyer",
-      "heading": "What a buyer should know",
-      "facts": [
-        {
-          "text": "You must have motor insurance to drive on UK roads. Third party insurance is the legal minimum. It covers damage or injury to other people, vehicles, animals and property, and does not cover repairs to your own vehicle.",
-          "src": [
-            "s5"
-          ]
-        },
-        {
-          "text": "If you are caught driving a vehicle you are not insured to drive, the police can give a fixed penalty of 300 pounds and 6 penalty points. A court can impose an unlimited fine and disqualification, and the police can seize and in some cases destroy the vehicle.",
-          "src": [
-            "s6"
-          ]
-        },
-        {
-          "text": "The registered keeper of an uninsured vehicle that has not been declared off the road (SORN) can be fined 100 pounds, have the vehicle clamped, impounded or destroyed, or be taken to court for a fine of up to 1,000 pounds. GOV.UK points to askMID for checking.",
-          "src": [
-            "s7"
-          ]
-        },
-        {
-          "text": "The MIB's Check Your Vehicle tool uses Navigate, the central record of insured vehicles in the UK, and answers only insured or not insured. An answer of insured means a live policy exists, not that it is the right policy, for example for how you use the car. The service may be used only for vehicles you own or have the legal right to drive.",
-          "src": [
-            "s8"
-          ],
-          "note": "GOV.UK still calls this service askMID; the MIB page calls it Check Your Vehicle, using Navigate."
-        },
-        {
-          "text": "You can create a driving licence check code to share your driving record with someone, for example a car hire company. The code is valid for 21 days. You need your licence number, your National Insurance number and the postcode on your licence.",
-          "src": [
-            "s9"
-          ],
-          "note": "The page does not say insurers use this code; do not assume they do."
-        }
-      ],
-      "paras": [
-        "Our reading, from the sources above: insure the car before you drive it away, make sure the policy covers the use you intend, and keep the policy documents with the V5C. Our My car page has the other steps."
-      ],
-      "open": false
-    },
-    {
       "id": "apis",
       "heading": "Which APIs and data are public",
       "table": {
@@ -296,37 +336,48 @@
       "id": "agent",
       "heading": "Can an agent find insurance for you?",
       "label": "Our reading",
-      "paras": [
-        "What an agent can honestly do today:"
-      ],
-      "list": [
-        "Gather the facts a quote asks for from your own documents and from official services: make, tax and MOT status from the DVLA service, and your licence details, which you share yourself. These are personal data. The agent does not keep or publish them.",
-        "Prepare a checklist of what to ask: cover level, excess, use, named drivers, where the car is kept, and what happens at renewal.",
-        "Open the comparison sites for you, with no affiliate links, so that you enter or confirm the details yourself.",
-        "Remind you to compare again at each renewal."
-      ],
-      "paras_after": [
-        "What it cannot do, on the evidence we found:"
-      ],
-      "list_after": [
-        "Fetch quotes automatically from a comparison site. MoneySuperMarket's terms, last amended 13 July 2026, forbid any robot, bot, spider, scraper or other automated tool from accessing or copying the site or its data, and limit use to a person seeking a product for themselves. We could not read the other large sites' terms, so check them before pointing an agent at them.",
-        "Obtain a binding quote from an insurer without a commercial arrangement. We found no public quote API.",
-        "Say which deal is best. No neutral source we found ranks them, and the answer changes with the person and the day.",
-        "Check the insurance on a car you are only thinking of buying. The MIB tool is for vehicles you own or may legally drive."
-      ],
-      "paras_end": [
-        "Not assessed: whether an agent that arranges or sells insurance for you needs FCA authorisation. We have not looked at the FCA's rules on this. Ask the FCA before building or using an agent that does more than gather facts."
-      ],
-      "facts": [
+      "open": true,
+      "blocks": [
         {
-          "text": "MoneySuperMarket's terms say the site and app are for personal use only, and prohibit using any robot, bot, spider, scraper or other automated device, program, tool, algorithm, code, process or methodology to access, obtain, copy, monitor or republish any part of the site or its data. The terms were last amended on 13 July 2026.",
-          "src": [
-            "s11"
-          ],
-          "note": "One site's terms. They are the only comparison-site terms we could read."
+          "p": "The limit that matters most is set by the comparison sites' own terms. We could read one site's terms:"
+        },
+        {
+          "facts": [
+            {
+              "text": "MoneySuperMarket's terms say the site and app are for personal use only, and prohibit using any robot, bot, spider, scraper or other automated device, program, tool, algorithm, code, process or methodology to access, obtain, copy, monitor or republish any part of the site or its data. The terms were last amended on 13 July 2026.",
+              "src": [
+                "s11"
+              ],
+              "note": "One site's terms. They are the only comparison-site terms we could read."
+            }
+          ]
+        },
+        {
+          "p": "What an agent can honestly do today:"
+        },
+        {
+          "list": [
+            "Gather the facts a quote asks for from your own documents and from official services: make, tax and MOT status from the DVLA service, and your licence details, which you share yourself. These are personal data. The agent does not keep or publish them.",
+            "Prepare a checklist of what to ask: cover level, excess, use, named drivers, where the car is kept, and what happens at renewal.",
+            "Open the comparison sites for you, with no affiliate links, so that you enter or confirm the details yourself.",
+            "Remind you to compare again at each renewal."
+          ]
+        },
+        {
+          "p": "What it cannot do, on the evidence we found:"
+        },
+        {
+          "list": [
+            "Fetch quotes automatically from a comparison site. MoneySuperMarket's terms limit use to a person seeking a product for themselves and forbid automated tools. We could not read the other large sites' terms, so check them before pointing an agent at them.",
+            "Obtain a binding quote from an insurer without a commercial arrangement. We found no public quote API.",
+            "Say which deal is best. No neutral source we found ranks them, and the answer changes with the person and the day.",
+            "Check the insurance on a car you are only thinking of buying. The MIB tool is for vehicles you own or may legally drive."
+          ]
+        },
+        {
+          "p": "Not assessed: whether an agent that arranges or sells insurance for you needs FCA authorisation. We have not looked at the FCA's rules on this. Ask the FCA before building or using an agent that does more than gather facts."
         }
-      ],
-      "open": true
+      ]
     },
     {
       "id": "open",
@@ -337,7 +388,8 @@
         "The terms of the other large comparison sites on automated use. Their pages did not load for us.",
         "What the Aviva developer portal exposes. The page did not load for us.",
         "Whether any insurer offers a public quote API for UK cars.",
-        "Whether an agent arranging insurance needs FCA authorisation."
+        "Whether an agent arranging insurance needs FCA authorisation.",
+        "Young drivers, multi-car policies, named drivers and no-claims discounts. This page does not cover them and we have not researched them."
       ],
       "paras": [
         "If you know a public source for any of these, tell us and we will add it with its date. This list is also kept on the page of things we cannot do yet."
